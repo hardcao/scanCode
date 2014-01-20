@@ -1,0 +1,1 @@
+PODS_STUDYBASE_OLIMAGEVIEW_OTHER_LDFLAGS = -framework ImageIO -framework MobileCoreServices -framework QuartzCore
