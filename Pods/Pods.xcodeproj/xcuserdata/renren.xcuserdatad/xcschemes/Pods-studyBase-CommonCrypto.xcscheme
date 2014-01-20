@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "68511EFF447F41D9944F4F95"
+               BlueprintIdentifier = "254A7C22880F4698A3BCB772"
                BuildableName = "libPods-studyBase-CommonCrypto.a"
                BlueprintName = "Pods-studyBase-CommonCrypto"
                ReferencedContainer = "container:Pods.xcodeproj">
