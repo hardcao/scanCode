@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>RI.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>RITest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>studyBase.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,12 +22,112 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>77084DE5188E5ACD006C791A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>77084DFB188E5ACE006C791A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>772A3427188CC6A40095AAAC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>772A3447188CC6A50095AAAC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>77400258188CE3C600DBCDD2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>77400272188CE3C700DBCDD2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7752215A188E671A00BFD62B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>77522176188E671A00BFD62B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7752218E188E676400BFD62B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>775221AD188E676400BFD62B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>775221C5188E679E00BFD62B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>775221E4188E679F00BFD62B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>775221FC188E67CC00BFD62B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7752221B188E67CC00BFD62B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>77522233188E6ADE00BFD62B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>77522252188E6ADE00BFD62B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7752226A188E6B1300BFD62B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>77522280188E6B1300BFD62B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>77522298188E6BBF00BFD62B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>775222AE188E6BC000BFD62B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>775222C7188E6D0500BFD62B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>775222DD188E6D0600BFD62B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -2,7 +2,7 @@ platform :ios, "5.0"
 
 inhibit_all_warnings!
 
-target :'studyBase' do
+target :'RITest' do
     pod 'Base64nl', '~>1.1'
     pod 'CocoaLumberjack', '~>1.6.2'
     pod 'JSONModel', '~>0.9.1'
@@ -17,9 +17,7 @@ target :'studyBase' do
     pod 'OLImageView', '~> 1.3.0.1'
     pod 'SDWebImage', '~> 3.5'
     pod 'UIActivityIndicator-for-SDWebImage', '~>1.0.0'
-end
-
-target :studyBaseTests, :exclusive => true do
     pod 'GHUnitIOS', '~> 0.5.6'
     pod 'OCMock', '~> 2.2'
 end
+

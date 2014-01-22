@@ -38,6 +38,26 @@
                ReferencedContainer = "container:studyBase.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "775222DD188E6D0600BFD62B"
+               BuildableName = "RITestTests.xctest"
+               BlueprintName = "RITestTests"
+               ReferencedContainer = "container:studyBase.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "775221E4188E679F00BFD62B"
+               BuildableName = "RITests.xctest"
+               BlueprintName = "RITests"
+               ReferencedContainer = "container:studyBase.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

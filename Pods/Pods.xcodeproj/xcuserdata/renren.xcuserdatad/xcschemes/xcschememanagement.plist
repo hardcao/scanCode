@@ -4,97 +4,92 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-studyBase-AFNetworking.xcscheme</key>
+		<key>Pods-RITest-AFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-studyBase-Base64nl.xcscheme</key>
+		<key>Pods-RITest-Base64nl.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-studyBase-CocoaLumberjack.xcscheme</key>
+		<key>Pods-RITest-CocoaLumberjack.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-studyBase-CommonCrypto.xcscheme</key>
+		<key>Pods-RITest-CommonCrypto.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-studyBase-JSONModel.xcscheme</key>
+		<key>Pods-RITest-GHUnitIOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-studyBase-MD5Digest.xcscheme</key>
+		<key>Pods-RITest-JSONModel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-studyBase-NSData+MD5Digest.xcscheme</key>
+		<key>Pods-RITest-MD5Digest.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-studyBase-OLImageView.xcscheme</key>
+		<key>Pods-RITest-NSData+MD5Digest.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-studyBase-Reachability.xcscheme</key>
+		<key>Pods-RITest-OCMock.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-studyBase-RestKit.xcscheme</key>
+		<key>Pods-RITest-OLImageView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-studyBase-SDWebImage.xcscheme</key>
+		<key>Pods-RITest-Reachability.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-studyBase-SOCKit.xcscheme</key>
+		<key>Pods-RITest-RestKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-studyBase-TransitionKit.xcscheme</key>
+		<key>Pods-RITest-SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-studyBase-UIActivityIndicator-for-SDWebImage.xcscheme</key>
+		<key>Pods-RITest-SOCKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-studyBase-UICKeyChainStore.xcscheme</key>
+		<key>Pods-RITest-TransitionKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-studyBase.xcscheme</key>
+		<key>Pods-RITest-UIActivityIndicator-for-SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-studyBaseTests-GHUnitIOS.xcscheme</key>
+		<key>Pods-RITest-UICKeyChainStore.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-studyBaseTests-OCMock.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-studyBaseTests.xcscheme</key>
+		<key>Pods-RITest.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -102,97 +97,92 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0AC31E3F0F0A4E998B506F84</key>
+		<key>2C8C569A228E48BEBA637F6C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0DE4EC03EE124D5BBE35C6AE</key>
+		<key>2D6C2F3F8B9F4D3C98CFEFCF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>12EC9753F6FB495A90D4FA5F</key>
+		<key>2E2A8544B45A4101ADF90DA7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1A9B988FCA5F4CD683AAD535</key>
+		<key>3B38EF95AFB5430799D7C5D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>20173792C9A1482FB79B27D4</key>
+		<key>49319E332AC94E78B0DA8243</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>254A7C22880F4698A3BCB772</key>
+		<key>69443519BBF14FC2BB2E1503</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2E22946407124D1B9FEC38A9</key>
+		<key>8A696A15A71449A99FFC51BE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>45D7380B1EA6410896EA413E</key>
+		<key>8F460B9FD7534C8CB3CF2C97</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4BAC15D102A34918857298CD</key>
+		<key>9D401E356C774D898339E2CB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4D6AEACAC203489D8C451A31</key>
+		<key>A6C93C1C56264A1499FB1B99</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5C85B814B96549DCA25358CE</key>
+		<key>C63A5CDFDAEE4A3B9A09E6BF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>89B08C939DA1478CB6A92E8C</key>
+		<key>CDADC3EEA2A244748051FF69</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8D617DF555634DF995C749AE</key>
+		<key>D489BCC6934F4673AA30BF28</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>984CE1FB7C1C4B9C871A45DF</key>
+		<key>E0EE63E59FD8484D8214A418</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A6E469048B4147F69DD79681</key>
+		<key>EA413BEE11DA409295E9E52F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A6E63908841B476E86FB2EEF</key>
+		<key>F28E90BB79F545D2ADD8AAAA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B105C349D991490FBF671165</key>
+		<key>FD4838592A6F4C0EBF9B7BB5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DA65AAA0815240C389161647</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F128F9C68D61490EB7E1B17E</key>
+		<key>FF0C790076B5420FA35D3933</key>
 		<dict>
 			<key>primary</key>
 			<true/>
