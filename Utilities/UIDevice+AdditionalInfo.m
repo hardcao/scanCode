@@ -8,7 +8,7 @@
 
 #import "UIDevice+AdditionalInfo.h"
 
-#import "RISetting.h"
+#import "RISettings.h"
 #import "RRKeyChain.h"
 #import <CoreTelephony/CTCarrier.h>
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>

@@ -31,20 +31,16 @@ extern NSString * const kEmotionPlistName;
 + (void)cleanCacheWithFetchRequest:(NSFetchRequest *)fetchRequest reservedData:(NSArray *)array;
 + (void)replaceCacheWithManagedObjectArray:(NSArray *)newArray;
 + (NSString *)requestStringForParametersWithSecretKey:(NSDictionary *)parameters;
-+ (NSString *)convertPlacePOIInfoToPlaceInfoString:(MPlacePOIInfo *)placePOIInfo;
 + (void)copyEmotionPlistToLocalDiskWhenAppFirstRun;
 + (NSBundle *)emotionBundle;
 + (NSBundle *)defaultBackgroundImageBundle;
 + (NSBundle *)defaultBackgroundThumbnailImageBundle;
 + (NSBundle *)defaultBackgroundOriginalImageBundle;
-+ (ALAssetsLibrary *)defaultALAssetsLibrary;
 + (NSString *)errorStringForCode:(NSString *)errorCode;
 + (NSString *)networkUnreachableString;
 //根据userid获取头像url,目前主要用于服务器没下发的原作者头像
 + (NSString *)headURLByUserID:(NSNumber *)userID;
 + (NSString *)headURLByJabberID:(NSString *)jabberID;
-+ (NSString *)pinyinStringForName:(NSString *)userName;
-+ (NSArray *)sortedArrayForUserInfoArray:(NSArray *)array;
 + (id)objectFromPlist:(NSString *)pilstName;
 
 //数据持久化
@@ -53,7 +49,6 @@ extern NSString * const kEmotionPlistName;
 
 //拼装讨论组头像
 + (void)constructMucGroupHeadImageWithHeadURLs:(NSArray *)headURLs imageView:(UIImageView *)imageView;
-+ (void)InstallUncaughtExceptionHandler;
 
 //单队列操作数据的删除，解析
 + (dispatch_queue_t)serialManagedObjectOperateQueue;

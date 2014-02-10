@@ -18,6 +18,9 @@
 		7716BD13188F6CE800AB539C /* MResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7716BD12188F6CE800AB539C /* MResult.m */; };
 		7716BD16188F6D1E00AB539C /* MUserLoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7716BD15188F6D1E00AB539C /* MUserLoginInfo.m */; };
 		7716BD19188F6D5E00AB539C /* MError.m in Sources */ = {isa = PBXBuildFile; fileRef = 7716BD18188F6D5E00AB539C /* MError.m */; };
+		7716BD22188F7DB900AB539C /* RIDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7716BD20188F7DB900AB539C /* RIDataModel.xcdatamodeld */; };
+		7716BD24188F7E8E00AB539C /* MError.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7716BD23188F7E8E00AB539C /* MError.plist */; };
+		7716BD2A188F883000AB539C /* RILoginTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7716BD29188F883000AB539C /* RILoginTest.m */; };
 		775222C9188E6D0600BFD62B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 772A342B188CC6A40095AAAC /* Foundation.framework */; };
 		775222CA188E6D0600BFD62B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 772A342D188CC6A40095AAAC /* CoreGraphics.framework */; };
 		775222CB188E6D0600BFD62B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 772A342F188CC6A40095AAAC /* UIKit.framework */; };
@@ -78,6 +81,9 @@
 		7716BD15188F6D1E00AB539C /* MUserLoginInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MUserLoginInfo.m; path = Model/MUserLoginInfo.m; sourceTree = "<group>"; };
 		7716BD17188F6D5E00AB539C /* MError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MError.h; path = Model/MError.h; sourceTree = "<group>"; };
 		7716BD18188F6D5E00AB539C /* MError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MError.m; path = Model/MError.m; sourceTree = "<group>"; };
+		7716BD21188F7DB900AB539C /* RIDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RIDataModel.xcdatamodel; sourceTree = "<group>"; };
+		7716BD23188F7E8E00AB539C /* MError.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MError.plist; sourceTree = "<group>"; };
+		7716BD29188F883000AB539C /* RILoginTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RILoginTest.m; path = RILogin/RILoginTest.m; sourceTree = "<group>"; };
 		772A342B188CC6A40095AAAC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		772A342D188CC6A40095AAAC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		772A342F188CC6A40095AAAC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -177,6 +183,7 @@
 				7716BD15188F6D1E00AB539C /* MUserLoginInfo.m */,
 				7716BD17188F6D5E00AB539C /* MError.h */,
 				7716BD18188F6D5E00AB539C /* MError.m */,
+				7716BD20188F7DB900AB539C /* RIDataModel.xcdatamodeld */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -190,6 +197,14 @@
 				7716BCFD188F6A7F00AB539C /* RILoggingManager.m */,
 			);
 			name = Manager;
+			sourceTree = "<group>";
+		};
+		7716BD2B188F883A00AB539C /* RILogin */ = {
+			isa = PBXGroup;
+			children = (
+				7716BD29188F883000AB539C /* RILoginTest.m */,
+			);
+			name = RILogin;
 			sourceTree = "<group>";
 		};
 		772A341F188CC6A40095AAAC = {
@@ -242,6 +257,7 @@
 				77084DDA188E55CB006C791A /* Model */,
 				77400288188CEDB700DBCDD2 /* RISettings.h */,
 				77400289188CEDB700DBCDD2 /* RISettings.m */,
+				7716BD23188F7E8E00AB539C /* MError.plist */,
 			);
 			name = studyBase;
 			sourceTree = "<group>";
@@ -249,6 +265,7 @@
 		775222CC188E6D0600BFD62B /* RITest */ = {
 			isa = PBXGroup;
 			children = (
+				7716BD2B188F883A00AB539C /* RILogin */,
 				775222D8188E6D0600BFD62B /* Images.xcassets */,
 				775222CD188E6D0600BFD62B /* Supporting Files */,
 			);
@@ -365,6 +382,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7716BD24188F7E8E00AB539C /* MError.plist in Resources */,
 				775222D1188E6D0600BFD62B /* InfoPlist.strings in Resources */,
 				775222D9188E6D0600BFD62B /* Images.xcassets in Resources */,
 			);
@@ -418,11 +436,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7716BD2A188F883000AB539C /* RILoginTest.m in Sources */,
 				77B887CA188E942900C21C3A /* RISettings.m in Sources */,
 				7716BD19188F6D5E00AB539C /* MError.m in Sources */,
 				7716BD0D188F6C5600AB539C /* RIRegisteredRequest.m in Sources */,
 				7716BD10188F6CA600AB539C /* RILoginRequest.m in Sources */,
 				7716BD13188F6CE800AB539C /* MResult.m in Sources */,
+				7716BD22188F7DB900AB539C /* RIDataModel.xcdatamodeld in Sources */,
 				7716BD0A188F6BF900AB539C /* RIDataSourceRegister.m in Sources */,
 				7716BD16188F6D1E00AB539C /* MUserLoginInfo.m in Sources */,
 				7716BD04188F6B2F00AB539C /* RIDataRequest.m in Sources */,
@@ -658,6 +678,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7716BD20188F7DB900AB539C /* RIDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7716BD21188F7DB900AB539C /* RIDataModel.xcdatamodel */,
+			);
+			currentVersion = 7716BD21188F7DB900AB539C /* RIDataModel.xcdatamodel */;
+			path = RIDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 772A3420188CC6A40095AAAC /* Project object */;
 }

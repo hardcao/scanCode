@@ -14,7 +14,7 @@
 //  Copyright (c) 2013年 Renren-inc. All rights reserved.
 //
 
-#import "RISetting.h"
+#import "RISettings.h"
 
 #import "UIDevice+AdditionalInfo.h"
 #import "RRKeyChain.h"
@@ -39,28 +39,25 @@ static NSString * const apiURLDefault = @"http://api.m.renren.com/api";
 static NSString * const fromIDDefault = @"2000505";
 static NSString * const kRenRenChatHostName = @"talk.m.renren.com";
 static const NSInteger kRenRenChatHostPort = 25553;
-static NSString * const kRIChatDomainForSingleChat = @"talk.m.renren.com";
-static NSString * const kRIChatDomainForMultiUserChat = @"muc.talk.renren.com";
-static int const kRIChatServerVersion = 22;
 static NSString * const feedBackURLDefault = @"http://3g.renren.com/help/guestbook.do?";
 static NSString * const appCentetURLDefault = @"http://3gapp.renren.com?access_version=1";
 static NSString * const searchFriendsURLDefault = @"http://mt.renren.com/client/search";
 static NSString * const ignoreStrangerChatMessageSwitchStateKeyInUserDefaults = @"ignoreStrangerChatMessageSwitchStateKey";
 static NSString * const specialFocusNewsFeedSwitchStateKeyInUserDefaults = @"specialFocusNewsFeedSwitchStateKey";
 
-@implementation RISetting
+@implementation RISettings
 
-+ (RISetting*) globalSettings
++ (RISettings*) globalSettings
 {
     static dispatch_once_t once;
-    static RISetting *_sharedInstance;
+    static RISettings *_sharedInstance;
     dispatch_once(&once, ^{
-        _sharedInstance = [[RISetting alloc] initWithDefaults];
+        _sharedInstance = [[RISettings alloc] initWithDefaults];
     });
     return _sharedInstance;
 }
 
-- (RISetting*) initWithDefaults
+- (RISettings*) initWithDefaults
 {
     if (self = [super init]) {
         NSDictionary *bundleInfo = [[NSBundle mainBundle] infoDictionary];
@@ -95,56 +92,6 @@ static NSString * const specialFocusNewsFeedSwitchStateKeyInUserDefaults = @"spe
     }
     
     return self;
-}
-
-#pragma mark ServerSetting
-- (NSArray *)getServerSettingData:(SettingPageEnum)itemType
-{
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString * plistPath = [documentsDirectory stringByAppendingPathComponent:@"ServerSetting.plist"];
-    NSMutableDictionary *ServerInfo = [[NSMutableDictionary alloc] initWithContentsOfFile:plistPath];
-    if (!ServerInfo) {
-        ServerInfo = [NSMutableDictionary dictionary];
-    }
-    NSArray *rowContentArray = nil;
-    switch (itemType) {
-        case kSettingPageMobileClientServerURL:
-        {
-            NSMutableArray *moblieClientServerURLArray = [ServerInfo objectForKey:@"MCSServer"];
-            if (!moblieClientServerURLArray) {
-                moblieClientServerURLArray = [NSMutableArray arrayWithArray:@[@{@"name":@"http://api.m.renren.com/api",@"status":@(YES)},@{@"name":@"http://mc1.test.renren.com/api",@"status":@(NO)},@{@"name":@"http://mc2.test.renren.com/api",@"status":@(NO)},@{@"name":@"http://mc3.test.renren.com/api",@"status":@(NO)}]];
-                [ServerInfo setObject:moblieClientServerURLArray forKey:@"MCSServer"];
-                [ServerInfo writeToFile:plistPath atomically:YES];
-            }
-            rowContentArray = moblieClientServerURLArray;
-            break;
-        }
-        case kSettingPageChatServerURL:
-        {
-            NSArray *chatServerURLArray = [ServerInfo objectForKey:@"TalkServerAddress"];
-            if (!chatServerURLArray) {
-                chatServerURLArray = [NSMutableArray arrayWithArray:@[@{@"name":@"talk.m.renren.com",@"status":@(YES)},@{@"name":@"talk.test.renren.com",@"status":@(NO)},@{@"name":@"talk.apis.tk",@"status":@(NO)}]];
-                [ServerInfo setObject:chatServerURLArray forKey:@"TalkServerAddress"];
-                [ServerInfo writeToFile:plistPath atomically:YES];
-            }
-            rowContentArray = chatServerURLArray;
-            break;
-        }
-        case kSettingPageChatServerPort:
-        {
-            NSArray *chatServerPortArray = [ServerInfo objectForKey:@"TalkServerPort"];
-            if (!chatServerPortArray) {
-                chatServerPortArray = [NSMutableArray arrayWithArray:@[@{@"name":@"25553",@"status":@(YES)},@{@"name":@"25554",@"status":@(NO)},@{@"name":@"2903",@"status":@(NO)}]];
-                [ServerInfo setObject:chatServerPortArray forKey:@"TalkServerPort"];
-                [ServerInfo writeToFile:plistPath atomically:YES];
-            }
-            rowContentArray = chatServerPortArray;
-        }
-        default:
-            break;
-    }
-    return rowContentArray;
 }
 
 - (void)saveSettingData:(SettingPageEnum)itemType saveContent:(NSString *)contentsToSave

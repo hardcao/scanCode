@@ -13,8 +13,8 @@
 #import "RILoginManager.h"
 #import "RIUtility.h"
 
-NSString * const testUsername = @"18614077005";
-NSString * const testPassword = @"cao19891210";
+NSString * const testUsername = @"tdns@163.com";
+NSString * const testPassword = @"abcdefg";
 
 @implementation RIAppDelegate
 

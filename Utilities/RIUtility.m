@@ -10,12 +10,8 @@
 
 #import <objc/runtime.h>
 #import "RIDataSource.h"
-#import "MPlacePOIInfo.h"
 #import "JSONModel.h"
 #import "NSData+MD5Digest.h"
-#import "RIFriendManager.h"
-#import "RIUserManager.h"
-#import "RSGlobal.h"
 #import "SDImageCache.h"
 
 void HandleException(NSException *exception);
@@ -195,35 +191,6 @@ NSString * const UncaughtExceptionHandlerSignalKey = @"UncaughtExceptionHandlerS
     
     string = [NSString stringWithFormat:@"%@&sig=%@", string, [RIUtility signature:theParameters secretKey:secretKey]];
     return string;
-}
-
-+ (NSString *)convertPlacePOIInfoToPlaceInfoString:(MPlacePOIInfo *)placePOIInfo
-{
-    if (!placePOIInfo) {
-        return nil;
-    }
-    MUploadPlaceInfo *uploadPlaceInfo = [[MUploadPlaceInfo alloc] init];
-    uploadPlaceInfo.place_id = placePOIInfo.poiID;
-    uploadPlaceInfo.gps_latitude = placePOIInfo.latitude;
-    uploadPlaceInfo.gps_longitude = placePOIInfo.longitude;
-    uploadPlaceInfo.place_name = placePOIInfo.name;
-    uploadPlaceInfo.place_latitude = nil;
-    uploadPlaceInfo.place_longitude = nil;
-    uploadPlaceInfo.d = @(1);
-    uploadPlaceInfo.locate_type = @(4);
-    uploadPlaceInfo.source_type = @(2);
-    uploadPlaceInfo.privacy = @(2);
-    return [uploadPlaceInfo toJSONString];
-}
-
-+ (ALAssetsLibrary *)defaultALAssetsLibrary
-{
-    static ALAssetsLibrary *defaultAlAssetsLibrary;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        defaultAlAssetsLibrary = [[ALAssetsLibrary alloc] init];
-    });
-    return defaultAlAssetsLibrary;
 }
 
 #pragma mark - 表情
@@ -448,15 +415,6 @@ NSString * const UncaughtExceptionHandlerSignalKey = @"UncaughtExceptionHandlerS
 
 + (NSString *)headURLByUserID:(NSNumber *)userID
 {
-    NSString *headURL;
-    headURL = [[RIFriendManager sharedManager]friendHeadURLForUserID:userID];
-    if (headURL) {
-        return headURL;
-    }
-    headURL = [[RIUserManager sharedManager]userHeadURLForUserID:userID];
-    if (headURL) {
-        return headURL;
-    }
     return [@"http://ic.m.renren.com/gn?op=resize&w=40&h=40&p=" stringByAppendingString:userID.stringValue];
 }
 
@@ -465,41 +423,6 @@ NSString * const UncaughtExceptionHandlerSignalKey = @"UncaughtExceptionHandlerS
     NSArray *array = [jabberID componentsSeparatedByString:@"@"];
     NSNumber *userID = @([array[0] longLongValue]);
     return [self headURLByUserID:userID];
-}
-
-+ (NSString *)pinyinStringForName:(NSString *)userName
-{
-    if (!userName || userName.length == 0) {
-        return @"~";
-    }
-    NSDictionary *pinyinDict = [self pinyinDict];
-    NSMutableString *string = [NSMutableString string];
-    for (int i = 0; i < userName.length; ++i) {
-        NSString *character = [userName substringWithRange:NSMakeRange(i, 1)];
-        NSString *value = pinyinDict[character];
-        if (!value) {
-            unichar aChar = [userName characterAtIndex:i];
-            if (aChar > 0 && aChar < 127) {
-                value = character;
-            } else {
-                value = @"~";
-            }
-        }
-        [string appendString:value];
-    }
-    return string;
-}
-
-+ (NSDictionary *)pinyinDict
-{
-    static NSDictionary *pinyinDict;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        NSString *pinyinFilePath = [[NSBundle mainBundle]pathForResource:@"pinyinConversion" ofType:@"plist"];
-        pinyinDict = [NSDictionary dictionaryWithContentsOfFile:pinyinFilePath];
-        NSAssert(pinyinDict, @"pinyin dictionary read failed.");
-    });
-    return pinyinDict;
 }
 
 + (NSDictionary *)errorDict
@@ -531,45 +454,6 @@ NSString * const UncaughtExceptionHandlerSignalKey = @"UncaughtExceptionHandlerS
 + (NSString *)networkUnreachableString
 {
     return [self errorDict][@"-1009"];
-}
-
-+ (NSArray *)sortedArrayForUserInfoArray:(NSArray *)array
-{
-    if (!array || array.count <= 0) {
-        return array;
-    }
-    NSMutableArray *finalArray = [NSMutableArray arrayWithCapacity:array.count];
-    for (NSManagedObject *object in array) {
-        if ([object hasBeenDeleted]) {
-            continue;
-        }
-        NSAssert(class_getProperty([object class], "userName"), @"object should have property 'userName'.");
-        NSAssert(class_getProperty([object class], "pinyinUserName"), @"object should have property 'pinyinUserName'.");
-        if (![object valueForKey:@"pinyinUserName"]) {
-            [object setValue:[RIUtility pinyinStringForName:[object valueForKey:@"userName"]] forKey:@"pinyinUserName"];
-        }
-        [finalArray addObject:object];
-    }
-    
-    NSComparator comparator = ^(id obj1, id obj2) {
-        unichar temp = [[obj1 valueForKey:@"pinyinUserName"] characterAtIndex:0];
-        BOOL obj1FirstCharacterIsAlphabet = ((temp >= 'a' && temp <= 'z') || (temp >= 'A' && temp <= 'Z')) ? YES : NO;
-        temp = [[obj2 valueForKey:@"pinyinUserName"] characterAtIndex:0];
-        BOOL obj2FirstCharacterIsAlphabet = ((temp >= 'a' && temp <= 'z') || (temp >= 'A' && temp <= 'Z')) ? YES : NO;
-        if (obj1FirstCharacterIsAlphabet && obj2FirstCharacterIsAlphabet) {
-            return [[obj1 valueForKey:@"pinyinUserName"] compare:[obj2 valueForKey:@"pinyinUserName"] options:NSCaseInsensitiveSearch];
-        } else {
-            if (obj1FirstCharacterIsAlphabet || obj2FirstCharacterIsAlphabet) {
-                if (obj1FirstCharacterIsAlphabet) {
-                    return NSOrderedAscending;
-                }
-                return NSOrderedDescending;
-            } else {
-                return NSOrderedSame;
-            }
-        }
-    };
-    return [finalArray sortedArrayUsingComparator:comparator];
 }
 
 + (id)objectFromPlist:(NSString *)pilstName
@@ -663,11 +547,6 @@ NSString * const UncaughtExceptionHandlerSignalKey = @"UncaughtExceptionHandlerS
     }
 }
 
-+ (void)InstallUncaughtExceptionHandler
-{
-    NSSetUncaughtExceptionHandler(&HandleException);
-}
-
 + (dispatch_queue_t)serialManagedObjectOperateQueue
 {
     static dispatch_queue_t queue;
@@ -680,28 +559,3 @@ NSString * const UncaughtExceptionHandlerSignalKey = @"UncaughtExceptionHandlerS
 }
 
 @end
-
-void HandleException(NSException *exception)
-{
-    NSLog(@"CRASH: %@", exception);
-    NSLog(@"Description: %@", [exception name]);
-    NSLog(@"Description: %@", [exception description]);
-    NSLog(@"Stack Trace: %@", [exception callStackSymbols]);
-    NSString *crashLog = [NSString stringWithFormat:@"%@%@",[exception name], [exception callStackSymbols]];
-    NSArray  *searchPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentPath = [searchPath objectAtIndex:0];
-    NSString *path = [NSString stringWithFormat:@"%@/%@", documentPath, kRHCCrashLogPath];
-    NSError *error;
-    if (![crashLog writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:&error]) {
-        NSLog(@"write to file error:%@",error);
-    }
-    NSSetUncaughtExceptionHandler(NULL);
-    if ([[exception name] isEqual:UncaughtExceptionHandlerSignalExceptionName])
-    {
-        kill(getpid(), [[[exception userInfo] objectForKey:UncaughtExceptionHandlerSignalKey] intValue]);
-    }
-    else
-    {
-        [exception raise];
-    }
-}

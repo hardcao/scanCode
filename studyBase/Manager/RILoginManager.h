@@ -41,13 +41,5 @@ typedef void (^LoginFailedBlock)(NSString* errorMessage);
 
 - (void) logout;
 - (BOOL) hasLoggedIn;
-- (BOOL) isQualifiedToAutoLogin;
-
-- (void)deleteRecentLoginUser:(RIRecentLoginUserInfo *)userInfo;
-- (void)updateRecentUserLoginInfoWithUserID:(NSNumber *)userID info:(NSDictionary *)infoDictionary;
-
-- (void)updatePromptEmailListWithUserName:(NSString *)userName loginEmailInfo:(RILoginEmailListInfo *)loginEmailListInfo;
-
-- (void)autologin;
 
 @end

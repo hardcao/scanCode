@@ -99,46 +99,6 @@ typedef NS_ENUM (NSInteger, FeedGetTypeEnum)
     FeedGetFriend,
 };
 
-static NSString* typeStringForFeedGetType(FeedGetTypeEnum type)
-{
-    NSString *typeString;
-    switch (type) {
-        case FeedGetAll:
-            typeString = @"102,103,104,107,110,501,502,504,601,701,709,2003,2004,2005,2006,2008,2009,2012,2013,2002,2038";
-            break;
-        case FeedGetFocused:
-            typeString = @"102,103,104,107,110,501,502,504,601,701,709,1101,1104,1105,2003,2004,2005,2006,2008,2009,2012,2013,2015,2002,8905,8906,105";
-            break;
-        case FeedGetStatus:
-            typeString = @"502,2008";
-            break;
-        case FeedGetPhoto:
-            typeString = @"701,709,2013";
-            break;
-        case FeedGetPosition:
-            typeString = @"1101,1104,1105";
-            break;
-        case FeedGetShare:
-            typeString = @"102,103,104,107,110,2003,2004,2005,2006,2009";
-            break;
-        case FeedGetBlog:
-            typeString = @"601,2012";
-            break;
-        case FeedGetOriginal:
-            typeString = @"501,502,504,601,701,709,2008,2012,2013,2002";
-            break;
-        case FeedGetCollection:
-            typeString = @"207";
-            break;
-        case FeedGetFriend:
-            typeString = @"501,502,504,601,701,709";
-            break;
-        default:
-            break;
-    }
-    return typeString;
-}
-
 #pragma mark - 新鲜事类型
 typedef NS_ENUM (NSInteger, MNewsFeedType) {
     MNewsFeedTypeShareBlog = 102,
@@ -193,69 +153,6 @@ typedef NS_ENUM (NSInteger, MNewsFeedType) {
     MNewsFeedTypeAdvert = 65530,
     MNewsUserHomeCollectionType = 65531
 };
-
-static NSString* prefixForLikeGIDByNewsFeedType(MNewsFeedType feedType)
-{
-    NSString *feedTypeString = @"";
-    switch (feedType) {
-        case MNewsFeedTypeStatus:
-        case MNewsFeedTypePageStatus:
-        {
-            feedTypeString = @"status";
-            break;
-        }
-        case MNewsFeedTypeBlog:
-        case MNewsFeedTypePageBlog:
-        {
-            feedTypeString = @"blog";
-            break;
-        }
-        case MNewsFeedTypeOnePhoto:
-        case MNewsFeedTypeMultiPhoto:
-        case MNewsFeedTypePagePhoto:
-        case MNewsFeedTypePageOnePhoto:
-        {
-            feedTypeString = @"photo";
-            break;
-        }
-        case MNewsFeedTypeShareStatus:
-        case MNewsFeedTypeShareBlog:
-        case MNewsFeedTypeSharePageBlog:
-        case MNewsFeedTypeSharePhoto:
-        case MNewsFeedTypeSharePagePhoto:
-        case MNewsFeedTypeShareAlbum:
-        case MNewsFeedTypeSharePageAlbum:
-        case MNewsFeedTypeShareVideo:
-        case MNewsFeedTypeSharePageVideo:
-        case MNewsFeedTypeShareLink:
-        case MNewsFeedTypeSharePageLink:
-        {
-            feedTypeString = @"share";
-            break;
-        }
-        default:
-            break;
-    }
-    return feedTypeString;
-}
-
-static NSString *shareTypeEnumChargeToShareTypeString(ShareTypeCodeEnum shareType)
-{
-    NSArray *shareTypeArray = [[NSArray alloc] initWithObjects:@"1",@"2",@"6",@"8",@"10",@"20",@"21",@"22",@"23",@"136",nil];
-    NSString *shareTypeString = @"";
-    NSInteger index = 0;
-    BOOL enterOnceFlag = NO;
-    for (index = 0; index < shareTypeArray.count; index++) {
-        if(shareType & (1 << index)) {
-            if (enterOnceFlag) {
-                shareTypeString = [shareTypeString stringByAppendingString:@","];
-            }
-            shareTypeString = [shareTypeString stringByAppendingString:shareTypeArray[index]];
-            enterOnceFlag = YES;
-        }
-    }
-    return shareTypeString;
-}
 
 typedef NS_ENUM(NSInteger, FeedListReturnTypeEnum)
 {

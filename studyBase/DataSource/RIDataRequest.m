@@ -11,7 +11,6 @@
 #import "MError.h"
 #import "RIDataSource.h"
 #import "RISettings.h"
-#import "RIModelAdjustBeforeUsingProtocol.h"
 #import "RILoginManager.h"
 #import "RIRegisteredRequest.h"
 
@@ -138,11 +137,6 @@
                 NSString *errorMessage = [MError descriptionForError:error];
                 RICallBlockSafely(failed, errorMessage);
                 return;
-            }
-        }
-        for (id object in objects) {
-            if ([object conformsToProtocol:@protocol(RIModelAdjustBeforeUsingProtocol)]) {
-                [object adjust];
             }
         }
         [RIUtility saveToPersistence];

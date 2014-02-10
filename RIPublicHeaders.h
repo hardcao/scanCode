@@ -28,9 +28,8 @@
 #import "RIGlobalMacros.h"
 #import "RIGlobalEnums.h"
 #import "RIDataProtocol.h"
-#import "NSArray+RIUtility.h"
-#import "RIUserInfoProtocol.h"
-#import "RILikeInfoProtocol.h"
+//#import "RIUserInfoProtocol.h"
+//#import "RILikeInfoProtocol.h"
 #import "RIUtility.h"
 
 #endif

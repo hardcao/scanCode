@@ -12,10 +12,9 @@
 #import "RIDataSourceRegister.h"
 #import "RILoginRequest.h"
 #import "RISettings.h"
-#import "RISignatureSerialization.h"
-#import "RIFriendManager.h"
 #import "RIUtility.h"
 #import "SDImageCache.h"
+#import "MError.h"
 
 const char *kDefaultDataBase = "RISQlite.db";
 static NSString * const kMfriendKey = @"MFriend";

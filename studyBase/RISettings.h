@@ -14,7 +14,7 @@ typedef enum {
     kSettingPageChatServerPort = 2
 } SettingPageEnum;
 
-@interface RISetting : NSObject
+@interface RISettings : NSObject
 
 @property (nonatomic, copy) NSString *appStoreID;
 @property (nonatomic, copy) NSString *appBundleID;
@@ -37,9 +37,8 @@ typedef enum {
 @property (nonatomic, assign) BOOL ignoreStrangerChatMessageSwitchState;
 @property (nonatomic, assign) BOOL specialFocusNewsFeedSwitchState;
 
-+ (RISetting*) globalSettings;
++ (RISettings*) globalSettings;
 - (NSString *)pushSettingEnable;
-- (NSArray *)getServerSettingData:(SettingPageEnum)itemType;
 - (void)saveSettingData:(SettingPageEnum)itemType saveContent:(NSString *)contentsToSave;
 - (void)deleteSettingData:(SettingPageEnum)itemType deleteContent:(NSString *)contentsToDelete;
 - (void)setIgnoreStrangerChatMessageSwitchState:(BOOL)isIgnore;
