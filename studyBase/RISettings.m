@@ -172,37 +172,37 @@ static NSString * const specialFocusNewsFeedSwitchStateKeyInUserDefaults = @"spe
 
 - (NSString *)getMCSServer
 {
-#ifdef DEBUG
-    for (NSDictionary *dic in [self getServerSettingData:kSettingPageMobileClientServerURL]) {
-        if (dic && [[dic objectForKey:@"status"] boolValue]) {
-            return [dic objectForKey:@"name"];
-        }
-    }
-#endif
+//#ifdef DEBUG
+//    for (NSDictionary *dic in [self getServerSettingData:kSettingPageMobileClientServerURL]) {
+//        if (dic && [[dic objectForKey:@"status"] boolValue]) {
+//            return [dic objectForKey:@"name"];
+//        }
+//    }
+//#endif
     return apiURLDefault;
 }
 
 - (NSString *)getTalkServerUrl
 {
-#ifdef DEBUG
-    for (NSDictionary *dic in [self getServerSettingData:kSettingPageChatServerURL]) {
-        if (dic && [[dic objectForKey:@"status"] boolValue]) {
-            return [dic objectForKey:@"name"];
-        }
-    }
-#endif
+//#ifdef DEBUG
+//    for (NSDictionary *dic in [self getServerSettingData:kSettingPageChatServerURL]) {
+//        if (dic && [[dic objectForKey:@"status"] boolValue]) {
+//            return [dic objectForKey:@"name"];
+//        }
+//    }
+//#endif
     return kRenRenChatHostName;
 }
 
 - (NSInteger)getTalkServerPort
 {
-#ifdef DEBUG
-    for (NSDictionary *dic in [self getServerSettingData:kSettingPageChatServerPort]) {
-        if (dic && [[dic objectForKey:@"status"] boolValue]) {
-            return [[dic objectForKey:@"name"] integerValue];
-        }
-    }
-#endif
+//#ifdef DEBUG
+//    for (NSDictionary *dic in [self getServerSettingData:kSettingPageChatServerPort]) {
+//        if (dic && [[dic objectForKey:@"status"] boolValue]) {
+//            return [[dic objectForKey:@"name"] integerValue];
+//        }
+//    }
+//#endif
     return kRenRenChatHostPort;
 }
 #pragma mark Push

@@ -6,6 +6,7 @@
 //  Copyright (c) 2014年 renren. All rights reserved.
 //
 
+#define RKCoreDataIncluded
 #import "RIDataSource.h"
 
 #import "RIDataRequest.h"

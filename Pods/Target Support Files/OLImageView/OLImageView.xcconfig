@@ -1,0 +1,5 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/OLImageView" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/Base64nl" "${PODS_ROOT}/Headers/Public/CocoaLumberjack" "${PODS_ROOT}/Headers/Public/CommonCrypto" "${PODS_ROOT}/Headers/Public/GHUnitIOS" "${PODS_ROOT}/Headers/Public/JSONModel" "${PODS_ROOT}/Headers/Public/MD5Digest" "${PODS_ROOT}/Headers/Public/NSData+MD5Digest" "${PODS_ROOT}/Headers/Public/OCMock" "${PODS_ROOT}/Headers/Public/OLImageView" "${PODS_ROOT}/Headers/Public/Reachability" "${PODS_ROOT}/Headers/Public/RestKit" "${PODS_ROOT}/Headers/Public/SDWebImage" "${PODS_ROOT}/Headers/Public/SOCKit" "${PODS_ROOT}/Headers/Public/TransitionKit" "${PODS_ROOT}/Headers/Public/UIActivityIndicator-for-SDWebImage" "${PODS_ROOT}/Headers/Public/UICKeyChainStore"
+OTHER_LDFLAGS = -framework "ImageIO" -framework "MobileCoreServices" -framework "QuartzCore"
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES

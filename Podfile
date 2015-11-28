@@ -1,4 +1,5 @@
-platform :ios, "5.0"
+platform :ios, "6.0"
+# Or platform :osx, '10.7'
 
 inhibit_all_warnings!
 

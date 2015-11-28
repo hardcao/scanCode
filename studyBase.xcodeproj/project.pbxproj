@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1333152B1C09A63800DAC59E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1333152A1C09A63800DAC59E /* main.m */; };
+		1333152E1C09A63800DAC59E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1333152D1C09A63800DAC59E /* AppDelegate.m */; };
+		133315311C09A63800DAC59E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 133315301C09A63800DAC59E /* ViewController.m */; };
+		133315341C09A63800DAC59E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 133315321C09A63800DAC59E /* Main.storyboard */; };
+		133315371C09A63800DAC59E /* ScanCode.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 133315351C09A63800DAC59E /* ScanCode.xcdatamodeld */; };
+		133315391C09A63800DAC59E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 133315381C09A63800DAC59E /* Assets.xcassets */; };
+		1333153C1C09A63800DAC59E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1333153A1C09A63800DAC59E /* LaunchScreen.storyboard */; };
+		133315471C09A63900DAC59E /* ScanCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 133315461C09A63900DAC59E /* ScanCodeTests.m */; };
+		133315521C09A63900DAC59E /* ScanCodeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 133315511C09A63900DAC59E /* ScanCodeUITests.m */; };
 		7716BCF8188F697500AB539C /* RIUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 7716BCF7188F697500AB539C /* RIUtility.m */; };
 		7716BCFB188F6A1D00AB539C /* RILoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7716BCFA188F6A1D00AB539C /* RILoginManager.m */; };
 		7716BCFE188F6A7F00AB539C /* RILoggingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7716BCFD188F6A7F00AB539C /* RILoggingManager.m */; };
@@ -20,19 +29,12 @@
 		7716BD19188F6D5E00AB539C /* MError.m in Sources */ = {isa = PBXBuildFile; fileRef = 7716BD18188F6D5E00AB539C /* MError.m */; };
 		7716BD22188F7DB900AB539C /* RIDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7716BD20188F7DB900AB539C /* RIDataModel.xcdatamodeld */; };
 		7716BD24188F7E8E00AB539C /* MError.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7716BD23188F7E8E00AB539C /* MError.plist */; };
-		7716BD2A188F883000AB539C /* RILoginTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7716BD29188F883000AB539C /* RILoginTest.m */; };
 		775222C9188E6D0600BFD62B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 772A342B188CC6A40095AAAC /* Foundation.framework */; };
 		775222CA188E6D0600BFD62B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 772A342D188CC6A40095AAAC /* CoreGraphics.framework */; };
 		775222CB188E6D0600BFD62B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 772A342F188CC6A40095AAAC /* UIKit.framework */; };
-		775222D1188E6D0600BFD62B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 775222CF188E6D0600BFD62B /* InfoPlist.strings */; };
-		775222D3188E6D0600BFD62B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 775222D2188E6D0600BFD62B /* main.m */; };
-		775222D7188E6D0600BFD62B /* RIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 775222D6188E6D0600BFD62B /* RIAppDelegate.m */; };
-		775222D9188E6D0600BFD62B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 775222D8188E6D0600BFD62B /* Images.xcassets */; };
 		775222DF188E6D0600BFD62B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 772A3449188CC6A50095AAAC /* XCTest.framework */; };
 		775222E0188E6D0600BFD62B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 772A342B188CC6A40095AAAC /* Foundation.framework */; };
 		775222E1188E6D0600BFD62B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 772A342F188CC6A40095AAAC /* UIKit.framework */; };
-		775222E9188E6D0600BFD62B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 775222E7188E6D0600BFD62B /* InfoPlist.strings */; };
-		775222EB188E6D0600BFD62B /* RITestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 775222EA188E6D0600BFD62B /* RITestTests.m */; };
 		77A5CE5C188E8E6600744321 /* UIDevice+AdditionalInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 77084DC0188E1BA1006C791A /* UIDevice+AdditionalInfo.m */; };
 		77A5CE5D188E8E6A00744321 /* RRKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 77084DC3188E1C87006C791A /* RRKeyChain.m */; };
 		77B887CA188E942900C21C3A /* RISettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 77400289188CEDB700DBCDD2 /* RISettings.m */; };
@@ -40,6 +42,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		133315431C09A63900DAC59E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 772A3420188CC6A40095AAAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 133315261C09A63800DAC59E;
+			remoteInfo = ScanCode;
+		};
+		1333154E1C09A63900DAC59E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 772A3420188CC6A40095AAAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 133315261C09A63800DAC59E;
+			remoteInfo = ScanCode;
+		};
 		775222E2188E6D0600BFD62B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 772A3420188CC6A40095AAAC /* Project object */;
@@ -50,7 +66,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		636E71D87C744115B8B7B60E /* Pods-RITest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RITest.xcconfig"; path = "Pods/Pods-RITest.xcconfig"; sourceTree = "<group>"; };
+		133315271C09A63800DAC59E /* ScanCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScanCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1333152A1C09A63800DAC59E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1333152C1C09A63800DAC59E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1333152D1C09A63800DAC59E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1333152F1C09A63800DAC59E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		133315301C09A63800DAC59E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		133315331C09A63800DAC59E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		133315361C09A63800DAC59E /* ScanCode.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScanCode.xcdatamodel; sourceTree = "<group>"; };
+		133315381C09A63800DAC59E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1333153B1C09A63800DAC59E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1333153D1C09A63800DAC59E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		133315421C09A63800DAC59E /* ScanCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScanCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		133315461C09A63900DAC59E /* ScanCodeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanCodeTests.m; sourceTree = "<group>"; };
+		133315481C09A63900DAC59E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1333154D1C09A63900DAC59E /* ScanCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScanCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		133315511C09A63900DAC59E /* ScanCodeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanCodeUITests.m; sourceTree = "<group>"; };
+		133315531C09A63900DAC59E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77084DBF188E1BA1006C791A /* UIDevice+AdditionalInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIDevice+AdditionalInfo.h"; path = "Utilities/UIDevice+AdditionalInfo.h"; sourceTree = "<group>"; };
 		77084DC0188E1BA1006C791A /* UIDevice+AdditionalInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+AdditionalInfo.m"; path = "Utilities/UIDevice+AdditionalInfo.m"; sourceTree = "<group>"; };
 		77084DC2188E1C87006C791A /* RRKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RRKeyChain.h; path = Utilities/RRKeyChain.h; sourceTree = "<group>"; };
@@ -83,7 +115,6 @@
 		7716BD18188F6D5E00AB539C /* MError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MError.m; path = Model/MError.m; sourceTree = "<group>"; };
 		7716BD21188F7DB900AB539C /* RIDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RIDataModel.xcdatamodel; sourceTree = "<group>"; };
 		7716BD23188F7E8E00AB539C /* MError.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MError.plist; sourceTree = "<group>"; };
-		7716BD29188F883000AB539C /* RILoginTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RILoginTest.m; path = RILogin/RILoginTest.m; sourceTree = "<group>"; };
 		772A342B188CC6A40095AAAC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		772A342D188CC6A40095AAAC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		772A342F188CC6A40095AAAC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -92,25 +123,36 @@
 		77400288188CEDB700DBCDD2 /* RISettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RISettings.h; path = studyBase/RISettings.h; sourceTree = "<group>"; };
 		77400289188CEDB700DBCDD2 /* RISettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RISettings.m; path = studyBase/RISettings.m; sourceTree = "<group>"; };
 		775222C8188E6D0600BFD62B /* RITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		775222CE188E6D0600BFD62B /* RITest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RITest-Info.plist"; sourceTree = "<group>"; };
-		775222D0188E6D0600BFD62B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		775222D2188E6D0600BFD62B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		775222D4188E6D0600BFD62B /* RITest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RITest-Prefix.pch"; sourceTree = "<group>"; };
-		775222D5188E6D0600BFD62B /* RIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RIAppDelegate.h; sourceTree = "<group>"; };
-		775222D6188E6D0600BFD62B /* RIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RIAppDelegate.m; sourceTree = "<group>"; };
-		775222D8188E6D0600BFD62B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		775222DE188E6D0600BFD62B /* RITestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RITestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		775222E6188E6D0600BFD62B /* RITestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RITestTests-Info.plist"; sourceTree = "<group>"; };
-		775222E8188E6D0600BFD62B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		775222EA188E6D0600BFD62B /* RITestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RITestTests.m; sourceTree = "<group>"; };
 		80FF347097FD4CFBB69CC571 /* libPods-RITest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RITest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A18E2D64BB5DB215B3585BD3 /* Pods-RITest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RITest.release.xcconfig"; path = "Pods/Target Support Files/Pods-RITest/Pods-RITest.release.xcconfig"; sourceTree = "<group>"; };
 		A2DDB848DB7347AF9C3E7E94 /* libPods-studyBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-studyBase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B61EDDA9571A4591BD1B07CA /* libPods-studyBaseTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-studyBaseTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8F0F2F8411E4B8DAD77C7E6 /* Pods-studyBaseTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studyBaseTests.xcconfig"; path = "Pods/Pods-studyBaseTests.xcconfig"; sourceTree = "<group>"; };
-		DD9BFF0ADD6C490B8B22BE5A /* Pods-studyBase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studyBase.xcconfig"; path = "Pods/Pods-studyBase.xcconfig"; sourceTree = "<group>"; };
+		D43278E3C9FF990B8774B1FD /* Pods-RITest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RITest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RITest/Pods-RITest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		133315241C09A63800DAC59E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1333153F1C09A63800DAC59E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1333154A1C09A63900DAC59E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		775222C5188E6D0500BFD62B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -135,6 +177,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		133315281C09A63800DAC59E /* ScanCode */ = {
+			isa = PBXGroup;
+			children = (
+				1333152C1C09A63800DAC59E /* AppDelegate.h */,
+				1333152D1C09A63800DAC59E /* AppDelegate.m */,
+				1333152F1C09A63800DAC59E /* ViewController.h */,
+				133315301C09A63800DAC59E /* ViewController.m */,
+				133315321C09A63800DAC59E /* Main.storyboard */,
+				133315381C09A63800DAC59E /* Assets.xcassets */,
+				1333153A1C09A63800DAC59E /* LaunchScreen.storyboard */,
+				1333153D1C09A63800DAC59E /* Info.plist */,
+				133315351C09A63800DAC59E /* ScanCode.xcdatamodeld */,
+				133315291C09A63800DAC59E /* Supporting Files */,
+			);
+			path = ScanCode;
+			sourceTree = "<group>";
+		};
+		133315291C09A63800DAC59E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1333152A1C09A63800DAC59E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		133315451C09A63900DAC59E /* ScanCodeTests */ = {
+			isa = PBXGroup;
+			children = (
+				133315461C09A63900DAC59E /* ScanCodeTests.m */,
+				133315481C09A63900DAC59E /* Info.plist */,
+			);
+			path = ScanCodeTests;
+			sourceTree = "<group>";
+		};
+		133315501C09A63900DAC59E /* ScanCodeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				133315511C09A63900DAC59E /* ScanCodeUITests.m */,
+				133315531C09A63900DAC59E /* Info.plist */,
+			);
+			path = ScanCodeUITests;
+			sourceTree = "<group>";
+		};
+		4328A640C19E3AFAC4410761 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D43278E3C9FF990B8774B1FD /* Pods-RITest.debug.xcconfig */,
+				A18E2D64BB5DB215B3585BD3 /* Pods-RITest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		77084DBE188E1B30006C791A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,14 +293,6 @@
 			name = Manager;
 			sourceTree = "<group>";
 		};
-		7716BD2B188F883A00AB539C /* RILogin */ = {
-			isa = PBXGroup;
-			children = (
-				7716BD29188F883000AB539C /* RILoginTest.m */,
-			);
-			name = RILogin;
-			sourceTree = "<group>";
-		};
 		772A341F188CC6A40095AAAC = {
 			isa = PBXGroup;
 			children = (
@@ -215,13 +301,12 @@
 				7716BCF3188F691400AB539C /* RIGlobalEnums.h */,
 				77084DBE188E1B30006C791A /* Utilities */,
 				77400253188CE21A00DBCDD2 /* studyBase */,
-				775222CC188E6D0600BFD62B /* RITest */,
-				775222E4188E6D0600BFD62B /* RITestTests */,
+				133315281C09A63800DAC59E /* ScanCode */,
+				133315451C09A63900DAC59E /* ScanCodeTests */,
+				133315501C09A63900DAC59E /* ScanCodeUITests */,
 				772A342A188CC6A40095AAAC /* Frameworks */,
 				772A3429188CC6A40095AAAC /* Products */,
-				DD9BFF0ADD6C490B8B22BE5A /* Pods-studyBase.xcconfig */,
-				C8F0F2F8411E4B8DAD77C7E6 /* Pods-studyBaseTests.xcconfig */,
-				636E71D87C744115B8B7B60E /* Pods-RITest.xcconfig */,
+				4328A640C19E3AFAC4410761 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -230,6 +315,9 @@
 			children = (
 				775222C8188E6D0600BFD62B /* RITest.app */,
 				775222DE188E6D0600BFD62B /* RITestTests.xctest */,
+				133315271C09A63800DAC59E /* ScanCode.app */,
+				133315421C09A63800DAC59E /* ScanCodeTests.xctest */,
+				1333154D1C09A63900DAC59E /* ScanCodeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -262,50 +350,62 @@
 			name = studyBase;
 			sourceTree = "<group>";
 		};
-		775222CC188E6D0600BFD62B /* RITest */ = {
-			isa = PBXGroup;
-			children = (
-				7716BD2B188F883A00AB539C /* RILogin */,
-				775222D8188E6D0600BFD62B /* Images.xcassets */,
-				775222CD188E6D0600BFD62B /* Supporting Files */,
-			);
-			path = RITest;
-			sourceTree = "<group>";
-		};
-		775222CD188E6D0600BFD62B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				775222D6188E6D0600BFD62B /* RIAppDelegate.m */,
-				775222D5188E6D0600BFD62B /* RIAppDelegate.h */,
-				775222CE188E6D0600BFD62B /* RITest-Info.plist */,
-				775222CF188E6D0600BFD62B /* InfoPlist.strings */,
-				775222D2188E6D0600BFD62B /* main.m */,
-				775222D4188E6D0600BFD62B /* RITest-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		775222E4188E6D0600BFD62B /* RITestTests */ = {
-			isa = PBXGroup;
-			children = (
-				775222EA188E6D0600BFD62B /* RITestTests.m */,
-				775222E5188E6D0600BFD62B /* Supporting Files */,
-			);
-			path = RITestTests;
-			sourceTree = "<group>";
-		};
-		775222E5188E6D0600BFD62B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				775222E6188E6D0600BFD62B /* RITestTests-Info.plist */,
-				775222E7188E6D0600BFD62B /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		133315261C09A63800DAC59E /* ScanCode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1333155A1C09A63900DAC59E /* Build configuration list for PBXNativeTarget "ScanCode" */;
+			buildPhases = (
+				133315231C09A63800DAC59E /* Sources */,
+				133315241C09A63800DAC59E /* Frameworks */,
+				133315251C09A63800DAC59E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScanCode;
+			productName = ScanCode;
+			productReference = 133315271C09A63800DAC59E /* ScanCode.app */;
+			productType = "com.apple.product-type.application";
+		};
+		133315411C09A63800DAC59E /* ScanCodeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1333155B1C09A63900DAC59E /* Build configuration list for PBXNativeTarget "ScanCodeTests" */;
+			buildPhases = (
+				1333153E1C09A63800DAC59E /* Sources */,
+				1333153F1C09A63800DAC59E /* Frameworks */,
+				133315401C09A63800DAC59E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				133315441C09A63900DAC59E /* PBXTargetDependency */,
+			);
+			name = ScanCodeTests;
+			productName = ScanCodeTests;
+			productReference = 133315421C09A63800DAC59E /* ScanCodeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1333154C1C09A63900DAC59E /* ScanCodeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1333155C1C09A63900DAC59E /* Build configuration list for PBXNativeTarget "ScanCodeUITests" */;
+			buildPhases = (
+				133315491C09A63900DAC59E /* Sources */,
+				1333154A1C09A63900DAC59E /* Frameworks */,
+				1333154B1C09A63900DAC59E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1333154F1C09A63900DAC59E /* PBXTargetDependency */,
+			);
+			name = ScanCodeUITests;
+			productName = ScanCodeUITests;
+			productReference = 1333154D1C09A63900DAC59E /* ScanCodeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		775222C7188E6D0500BFD62B /* RITest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 775222EC188E6D0600BFD62B /* Build configuration list for PBXNativeTarget "RITest" */;
@@ -315,6 +415,7 @@
 				775222C5188E6D0500BFD62B /* Frameworks */,
 				775222C6188E6D0500BFD62B /* Resources */,
 				254AD9E8D1284EA0AEBA3EE2 /* Copy Pods Resources */,
+				130F387D61CF5DCBB6605B47 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -353,6 +454,17 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = renren;
 				TargetAttributes = {
+					133315261C09A63800DAC59E = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					133315411C09A63800DAC59E = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 133315261C09A63800DAC59E;
+					};
+					1333154C1C09A63900DAC59E = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 133315261C09A63800DAC59E;
+					};
 					775222DD188E6D0600BFD62B = {
 						TestTargetID = 775222C7188E6D0500BFD62B;
 					};
@@ -373,18 +485,43 @@
 			targets = (
 				775222C7188E6D0500BFD62B /* RITest */,
 				775222DD188E6D0600BFD62B /* RITestTests */,
+				133315261C09A63800DAC59E /* ScanCode */,
+				133315411C09A63800DAC59E /* ScanCodeTests */,
+				1333154C1C09A63900DAC59E /* ScanCodeUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		133315251C09A63800DAC59E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1333153C1C09A63800DAC59E /* LaunchScreen.storyboard in Resources */,
+				133315391C09A63800DAC59E /* Assets.xcassets in Resources */,
+				133315341C09A63800DAC59E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		133315401C09A63800DAC59E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1333154B1C09A63900DAC59E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		775222C6188E6D0500BFD62B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7716BD24188F7E8E00AB539C /* MError.plist in Resources */,
-				775222D1188E6D0600BFD62B /* InfoPlist.strings in Resources */,
-				775222D9188E6D0600BFD62B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,13 +529,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				775222E9188E6D0600BFD62B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		130F387D61CF5DCBB6605B47 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RITest/Pods-RITest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		254AD9E8D1284EA0AEBA3EE2 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -411,7 +562,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-RITest-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RITest/Pods-RITest-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F1D59B339E4A427AA1F70379 /* Check Pods Manifest.lock */ = {
@@ -432,11 +583,37 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		133315231C09A63800DAC59E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				133315311C09A63800DAC59E /* ViewController.m in Sources */,
+				133315371C09A63800DAC59E /* ScanCode.xcdatamodeld in Sources */,
+				1333152E1C09A63800DAC59E /* AppDelegate.m in Sources */,
+				1333152B1C09A63800DAC59E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1333153E1C09A63800DAC59E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				133315471C09A63900DAC59E /* ScanCodeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		133315491C09A63900DAC59E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				133315521C09A63900DAC59E /* ScanCodeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		775222C4188E6D0500BFD62B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7716BD2A188F883000AB539C /* RILoginTest.m in Sources */,
 				77B887CA188E942900C21C3A /* RISettings.m in Sources */,
 				7716BD19188F6D5E00AB539C /* MError.m in Sources */,
 				7716BD0D188F6C5600AB539C /* RIRegisteredRequest.m in Sources */,
@@ -450,9 +627,7 @@
 				77A5CE5C188E8E6600744321 /* UIDevice+AdditionalInfo.m in Sources */,
 				7716BCFE188F6A7F00AB539C /* RILoggingManager.m in Sources */,
 				7716BCFB188F6A1D00AB539C /* RILoginManager.m in Sources */,
-				775222D3188E6D0600BFD62B /* main.m in Sources */,
 				7716BD07188F6B8200AB539C /* RIDataSource.m in Sources */,
-				775222D7188E6D0600BFD62B /* RIAppDelegate.m in Sources */,
 				7716BCF8188F697500AB539C /* RIUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,13 +636,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				775222EB188E6D0600BFD62B /* RITestTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		133315441C09A63900DAC59E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 133315261C09A63800DAC59E /* ScanCode */;
+			targetProxy = 133315431C09A63900DAC59E /* PBXContainerItemProxy */;
+		};
+		1333154F1C09A63900DAC59E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 133315261C09A63800DAC59E /* ScanCode */;
+			targetProxy = 1333154E1C09A63900DAC59E /* PBXContainerItemProxy */;
+		};
 		775222E3188E6D0600BFD62B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 775222C7188E6D0500BFD62B /* RITest */;
@@ -476,25 +660,145 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		775222CF188E6D0600BFD62B /* InfoPlist.strings */ = {
+		133315321C09A63800DAC59E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				775222D0188E6D0600BFD62B /* en */,
+				133315331C09A63800DAC59E /* Base */,
 			);
-			name = InfoPlist.strings;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		775222E7188E6D0600BFD62B /* InfoPlist.strings */ = {
+		1333153A1C09A63800DAC59E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				775222E8188E6D0600BFD62B /* en */,
+				1333153B1C09A63800DAC59E /* Base */,
 			);
-			name = InfoPlist.strings;
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		133315541C09A63900DAC59E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = ScanCode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = hardac.ScanCode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		133315551C09A63900DAC59E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = ScanCode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = hardac.ScanCode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		133315561C09A63900DAC59E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = ScanCodeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = hardac.ScanCodeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScanCode.app/ScanCode";
+			};
+			name = Debug;
+		};
+		133315571C09A63900DAC59E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = ScanCodeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = hardac.ScanCodeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScanCode.app/ScanCode";
+			};
+			name = Release;
+		};
+		133315581C09A63900DAC59E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = ScanCodeUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = hardac.ScanCodeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ScanCode;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		133315591C09A63900DAC59E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = ScanCodeUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = hardac.ScanCodeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ScanCode;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 		772A3458188CC6A50095AAAC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -571,7 +875,7 @@
 		};
 		775222ED188E6D0600BFD62B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 636E71D87C744115B8B7B60E /* Pods-RITest.xcconfig */;
+			baseConfigurationReference = D43278E3C9FF990B8774B1FD /* Pods-RITest.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -582,6 +886,29 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"/**",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"/**",
+					"\"${PODS_ROOT}/Headers/Public/Base64nl\"/**",
+					"\"${PODS_ROOT}/Headers/Public/CocoaLumberjack\"/**",
+					"\"${PODS_ROOT}/Headers/Public/CommonCrypto\"/**",
+					"\"${PODS_ROOT}/Headers/Public/GHUnitIOS\"/**",
+					"\"${PODS_ROOT}/Headers/Public/ISO8601DateFormatterValueTransformer\"/**",
+					"\"${PODS_ROOT}/Headers/Public/JSONModel\"/**",
+					"\"${PODS_ROOT}/Headers/Public/MD5Digest\"/**",
+					"\"${PODS_ROOT}/Headers/Public/NSData+MD5Digest\"/**",
+					"\"${PODS_ROOT}/Headers/Public/OCMock\"/**",
+					"\"${PODS_ROOT}/Headers/Public/OLImageView\"/**",
+					"\"${PODS_ROOT}/Headers/Public/RKValueTransformers\"/**",
+					"\"${PODS_ROOT}/Headers/Public/Reachability\"/**",
+					"\"${PODS_ROOT}/Headers/Public/RestKit\"/**",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"/**",
+					"\"${PODS_ROOT}/Headers/Public/SOCKit\"/**",
+					"\"${PODS_ROOT}/Headers/Public/TransitionKit\"/**",
+					"\"${PODS_ROOT}/Headers/Public/UIActivityIndicator-for-SDWebImage\"/**",
+					"\"${PODS_ROOT}/Headers/Public/UICKeyChainStore\"/**",
+				);
 				INFOPLIST_FILE = "RITest/RITest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -591,13 +918,36 @@
 		};
 		775222EE188E6D0600BFD62B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 636E71D87C744115B8B7B60E /* Pods-RITest.xcconfig */;
+			baseConfigurationReference = A18E2D64BB5DB215B3585BD3 /* Pods-RITest.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RITest/RITest-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"/**",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"/**",
+					"\"${PODS_ROOT}/Headers/Public/Base64nl\"/**",
+					"\"${PODS_ROOT}/Headers/Public/CocoaLumberjack\"/**",
+					"\"${PODS_ROOT}/Headers/Public/CommonCrypto\"/**",
+					"\"${PODS_ROOT}/Headers/Public/GHUnitIOS\"/**",
+					"\"${PODS_ROOT}/Headers/Public/ISO8601DateFormatterValueTransformer\"/**",
+					"\"${PODS_ROOT}/Headers/Public/JSONModel\"/**",
+					"\"${PODS_ROOT}/Headers/Public/MD5Digest\"/**",
+					"\"${PODS_ROOT}/Headers/Public/NSData+MD5Digest\"/**",
+					"\"${PODS_ROOT}/Headers/Public/OCMock\"/**",
+					"\"${PODS_ROOT}/Headers/Public/OLImageView\"/**",
+					"\"${PODS_ROOT}/Headers/Public/RKValueTransformers\"/**",
+					"\"${PODS_ROOT}/Headers/Public/Reachability\"/**",
+					"\"${PODS_ROOT}/Headers/Public/RestKit\"/**",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"/**",
+					"\"${PODS_ROOT}/Headers/Public/SOCKit\"/**",
+					"\"${PODS_ROOT}/Headers/Public/TransitionKit\"/**",
+					"\"${PODS_ROOT}/Headers/Public/UIActivityIndicator-for-SDWebImage\"/**",
+					"\"${PODS_ROOT}/Headers/Public/UICKeyChainStore\"/**",
+				);
 				INFOPLIST_FILE = "RITest/RITest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -650,6 +1000,30 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1333155A1C09A63900DAC59E /* Build configuration list for PBXNativeTarget "ScanCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				133315541C09A63900DAC59E /* Debug */,
+				133315551C09A63900DAC59E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1333155B1C09A63900DAC59E /* Build configuration list for PBXNativeTarget "ScanCodeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				133315561C09A63900DAC59E /* Debug */,
+				133315571C09A63900DAC59E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1333155C1C09A63900DAC59E /* Build configuration list for PBXNativeTarget "ScanCodeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				133315581C09A63900DAC59E /* Debug */,
+				133315591C09A63900DAC59E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		772A3423188CC6A40095AAAC /* Build configuration list for PBXProject "studyBase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -680,6 +1054,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		133315351C09A63800DAC59E /* ScanCode.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				133315361C09A63800DAC59E /* ScanCode.xcdatamodel */,
+			);
+			currentVersion = 133315361C09A63800DAC59E /* ScanCode.xcdatamodel */;
+			path = ScanCode.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		7716BD20188F7DB900AB539C /* RIDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

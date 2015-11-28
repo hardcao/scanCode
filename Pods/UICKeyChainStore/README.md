@@ -1,15 +1,12 @@
-# UICKeyChainStore
+# UICKeyChainStore ![License MIT](https://go-shields.herokuapp.com/license-MIT-yellow.png) 
 
-![version](http://cocoapod-badges.herokuapp.com/v/UICKeyChainStore/badge.svg)&nbsp;
-![platform](http://cocoapod-badges.herokuapp.com/p/UICKeyChainStore/badge.svg)&nbsp;
+[![Version](https://cocoapod-badges.herokuapp.com/v/UICKeyChainStore/badge.png)](https://cocoapod-badges.herokuapp.com/v/UICKeyChainStore/badge.png)
+[![Platform](https://cocoapod-badges.herokuapp.com/p/UICKeyChainStore/badge.png)](https://cocoapod-badges.herokuapp.com/p/UICKeyChainStore/badge.png)
 [![Build Status](https://travis-ci.org/kishikawakatsumi/UICKeyChainStore.png?branch=master)](https://travis-ci.org/kishikawakatsumi/UICKeyChainStore)
-[![Coverage Status](https://coveralls.io/repos/kishikawakatsumi/UICKeyChainStore/badge.png?branch=master)](https://coveralls.io/r/kishikawakatsumi/UICKeyChainStore?branch=master)
-
+[![Analytics](https://ga-beacon.appspot.com/UA-4291014-9/UICKeyChainStore/README.md)](https://github.com/igrigorik/ga-beacon)
 
 UICKeyChainStore is a simple wrapper for Keychain on iOS and OS X. Makes using Keychain APIs as easy as NSUserDefaults.
 
-## License
-MIT License
 
 ## Installation
 ### CocoaPods
@@ -80,6 +77,22 @@ Remove items.
 [store synchronize]; // Write to keychain.
 ```
 
+=====
+### Object Subscripting
+
+```objective-c
+UICKeyChainStore *store = [UICKeyChainStore keyChainStoreWithService:@"com.kishikawakatsumi"];
+```
+
+```objective-c
+store[@"username"] = @"kishikawakatsumi@mac.com";
+store[@"password"] = @"password1234";
+```
+
+```objective-c
+[store synchronize];
+```
+
 ---
 ### Debug print
 
@@ -90,3 +103,13 @@ NSLog(@"%@", store); // Print all keys and values for the service.
 
 ---
 Easy as that. (See [UICKeyChainStore.h](https://github.com/kishikawakatsumi/UICKeyChainStore/blob/master/Lib/UICKeyChainStore.h) for all of the methods.)
+
+
+## License
+
+[Apache]: http://www.apache.org/licenses/LICENSE-2.0
+[MIT]: http://www.opensource.org/licenses/mit-license.php
+[GPL]: http://www.gnu.org/licenses/gpl.html
+[BSD]: http://opensource.org/licenses/bsd-license.php
+
+UICKeyChainStore is available under the [MIT license][MIT]. See the LICENSE file for more info.
