@@ -8,132 +8,101 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>Base64nl.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>CocoaLumberjack.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>CommonCrypto.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>GHUnitIOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 		<key>JSONModel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 		<key>MD5Digest.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>7</integer>
 		</dict>
 		<key>NSData+MD5Digest.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>8</integer>
 		</dict>
 		<key>OCMock.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>9</integer>
 		</dict>
 		<key>OLImageView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>10</integer>
 		</dict>
-		<key>Pods-RITest.xcscheme</key>
+		<key>Pods-ScanCode.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>11</integer>
 		</dict>
 		<key>Reachability.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>12</integer>
 		</dict>
 		<key>RestKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>13</integer>
 		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>14</integer>
 		</dict>
 		<key>SOCKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>15</integer>
 		</dict>
 		<key>TransitionKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>16</integer>
 		</dict>
 		<key>UIActivityIndicator-for-SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>17</integer>
 		</dict>
 		<key>UICKeyChainStore.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>18</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>0339639885D3F74DFCF0F68BBF55C91E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>07BC2B27F9D973A521F1162C380B090B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -148,7 +117,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1C913995F96BF55A725B7C66095D6BB3</key>
+		<key>0CA228341801C6701E52076B3DA9BB69</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -163,17 +132,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3CB07C97787FED8643B755613CC8C9B1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>428492CEDE287A5F533E381E549918E4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>44BB32D38D9EB5D89B63E2BFAA9F8A06</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5D472EBCEB6FB25B46285DB0556E4D6B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -183,12 +147,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6F80268940FF3F06DB8688525382CC3C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>843EE12A2DD0561FBE69EAEE516EFF38</key>
+		<key>6AEB9EF92D6C482F868E796E4F1BF1E8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -198,17 +157,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A7B622DF9F27FA215053844DCB46843E</key>
+		<key>90A53E4570D64FC100F929EE43D8A05B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C4A9894BB906ACD40557C1124E5BEA98</key>
+		<key>A40907780E4D02AE6C2BB8407409FAAC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CB6D6F6D656C2E9713ED3FB76BEB2BBE</key>
+		<key>C3F666DD87DBCBD9018DD843526EF1EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C6ED2CF3FFA964F72AB20A136AB1C0A8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C70550E65640B6E6C149B056'
+               BlueprintIdentifier = '0EEB034FD859DEE0014C3B80'
                BlueprintName = 'GHUnitIOS'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libGHUnitIOS.a'>

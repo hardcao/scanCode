@@ -3,7 +3,7 @@ platform :ios, "6.0"
 
 inhibit_all_warnings!
 
-target :'RITest' do
+target :'ScanCode' do
     pod 'Base64nl', '~>1.1'
     pod 'CocoaLumberjack', '~>1.6.2'
     pod 'JSONModel', '~>0.9.1'
