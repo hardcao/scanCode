@@ -845,7 +845,7 @@
 					"\"${PODS_ROOT}/Headers/Public/UICKeyChainStore\"/**",
 				);
 				INFOPLIST_FILE = ScanCode/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = hardac.ScanCode;
@@ -889,7 +889,7 @@
 					"\"${PODS_ROOT}/Headers/Public/UICKeyChainStore\"/**",
 				);
 				INFOPLIST_FILE = ScanCode/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = hardac.ScanCode;

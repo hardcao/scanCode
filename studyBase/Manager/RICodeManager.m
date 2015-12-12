@@ -26,12 +26,13 @@
 - (RICodeManager*) init
 {
     if (self = [super init]) {
+        [[RIDataSource sharedInstance] setupDataSourceWithUserID:@98345345];
     }
     return self;
 }
 
 - (NSArray *) getAllCodeByCodeType:(NSString*)codeType {
-    NSString *predicateFormatString = [NSString stringWithFormat:@"(codeType = %@)", codeType];
+    NSString *predicateFormatString = [NSString stringWithFormat:@"(codeType == '%@')", codeType];
     NSPredicate *inPredicate = [NSPredicate predicateWithFormat:predicateFormatString];
     NSFetchRequest *localFetch = [NSFetchRequest fetchRequestWithEntityName:@"MCode"];
     localFetch.predicate = inPredicate;
@@ -50,11 +51,12 @@
 
 - (MCode *) getOneCodeByCodeType:(NSString *)codeType
                      codeContent:(NSString *)codeContent {
-    NSString *predicateFormatString = [NSString stringWithFormat:@"(codeType = %@) AND (codeContent == %@)", codeType, codeContent];
+    MCode * tmpCode;
+    NSString *predicateFormatString = [NSString stringWithFormat:@"(codeType == '%@') AND (codeContent == '%@')", codeType, codeContent];
     NSPredicate *inPredicate = [NSPredicate predicateWithFormat:predicateFormatString];
     NSFetchRequest *localFetch = [NSFetchRequest fetchRequestWithEntityName:@"MCode"];
     localFetch.predicate = inPredicate;
-    NSSortDescriptor *idDescriptor = [[NSSortDescriptor alloc] initWithKey:@"codeContent" ascending:NO];
+    NSSortDescriptor *idDescriptor = [[NSSortDescriptor alloc] initWithKey:@"codeContent" ascending:YES];
     [localFetch setSortDescriptors:@[idDescriptor]];
     
     __block NSArray *savedCodes = nil;
@@ -64,11 +66,12 @@
         savedCodes = [context executeFetchRequest:localFetch error:nil];
         totalCount = [context countForEntityForName:@"MCode" predicate:nil error:nil];
     }];
-    if(savedCodes.count > 0) return savedCodes[0];
+    if(savedCodes.count > 0) tmpCode = savedCodes[0];
+    if([tmpCode.codeType isEqual:codeType]&&[tmpCode.codeContent isEqual:codeContent]) return tmpCode;
     return nil;
 }
 
-- (bool) checkOneCodeByCodeType:(NSString *)codeType
+- (BOOL) checkOneCodeByCodeType:(NSString *)codeType
                     codeContent:(NSString *)codeContent {
     if([self getOneCodeByCodeType:codeType codeContent:codeContent] != nil) return true;
     return false;
@@ -77,11 +80,11 @@
 - (BOOL) insertOneCodeByCodeType:(NSString *)codeType
                      codeContent:(NSString *)codeContent {
     MCode * tmpCode;
-    NSString *predicateFormatString = [NSString stringWithFormat:@"(codeType = %@) AND (codeContent == %@)", codeType, codeContent];
+    NSString *predicateFormatString = [NSString stringWithFormat:@"(codeType == '%@') AND (codeContent == '%@')", codeType, codeContent];
     NSPredicate *inPredicate = [NSPredicate predicateWithFormat:predicateFormatString];
     NSFetchRequest *localFetch = [NSFetchRequest fetchRequestWithEntityName:@"MCode"];
     localFetch.predicate = inPredicate;
-    NSSortDescriptor *idDescriptor = [[NSSortDescriptor alloc] initWithKey:@"codeContent" ascending:NO];
+    NSSortDescriptor *idDescriptor = [[NSSortDescriptor alloc] initWithKey:@"codeContent" ascending:YES];
     [localFetch setSortDescriptors:@[idDescriptor]];
     
     __block NSArray *savedCodes = nil;
@@ -95,7 +98,7 @@
         tmpCode = savedCodes[0];
         tmpCode.scanCount = @(tmpCode.scanCount.integerValue + 1);
     } else {
-        MCode *tmpcode = [[MCode alloc] init];
+        MCode *tmpcode = [context insertNewObjectForEntityForName:@"MCode"];
         tmpcode.codeType = codeType;
         tmpcode.codeContent = codeContent;
         tmpcode.scanCount = @0;

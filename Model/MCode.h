@@ -11,8 +11,8 @@
 
 @interface MCode : NSManagedObject
 
-@property (nullable, nonatomic, retain) NSString *codeContent;
-@property (nullable, nonatomic, retain) NSString *codeType;
-@property (nullable, nonatomic, retain) NSNumber *scanCount;
+@property (nonatomic, retain) NSString *codeContent;
+@property (nonatomic, retain) NSString *codeType;
+@property (nonatomic, retain) NSNumber *scanCount;
 
 @end

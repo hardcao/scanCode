@@ -7,8 +7,9 @@
 //
 
 #import "RIUITableView.h"
+#import "RICodeManager.h"
 #import "RIUITableViewCell.h"
-
+#import "MCode.h"
 #define IDENTIFIER @"RIUITableViewCell"
 
 @implementation RIUITableView
@@ -16,7 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.dataList = [[RICodeManager sharedInstance] getAllCodeByCodeType:@"first"];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -36,17 +37,21 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
+    if(self.dataList) {
+        return self.dataList.count;
+    }
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    MCode *tmp = self.dataList[indexPath.row];
     RIUITableViewCell *cell = (RIUITableViewCell *)[tableView dequeueReusableCellWithIdentifier:IDENTIFIER];
     
     if (!cell) {
         cell = [[RIUITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:IDENTIFIER];
     }
     
-    [cell setTableCellWithCodeContent:@"test" scanNum:@3];
+    [cell setTableCellWithCodeContent:tmp.codeContent scanNum:tmp.scanCount.stringValue];
     
     return cell;
 }

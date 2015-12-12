@@ -12,6 +12,9 @@
 #import "RICodeManager.h"
 
 
+const NSInteger DefaultInputType = 0;
+const NSInteger DefaultOutputType = 1;
+
 @interface SYQRCodeViewController () <AVCaptureMetadataOutputObjectsDelegate>
 
 @property (nonatomic, strong) AVCaptureSession *qrSession;//回话
@@ -44,7 +47,7 @@ CGRect startFame;
     [self createBackBtn];
     self.title = @"DropDownMenu";
     self.chooseArray = [NSMutableArray arrayWithArray:@[
-                                                   @[@"童明城",@"童赟",@"童林杰",@"老萧狗"],
+                                                   @[@"first",@"scond",@"third"],
                                                    @[@"输入",@"输出"]
                                                    ]];
     
@@ -198,53 +201,42 @@ CGRect startFame;
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
 {
     //扫描结果
+    UIAlertView *alert = [[UIAlertView alloc]init];
     if (metadataObjects.count > 0)
     {
         [self stopSYQRCodeReading];
         
         AVMetadataMachineReadableCodeObject *obj = metadataObjects[0];
-        
         if (obj.stringValue && ![obj.stringValue isEqualToString:@""] && obj.stringValue.length > 0)
         {
-            NSLog(@"---------%@",obj.stringValue);
-            if(obj.stringValue != nil){
-            UIAlertView *alert = [[UIAlertView alloc]init];
-                [alert initWithTitle:self.chooseArray[0][self.scanType.integerValue] message:obj.stringValue delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-                [alert show];
-            }
-            if ([obj.stringValue containsString:@"http"])
-            {
-                if (self.SYQRCodeSuncessBlock) {
-                    self.SYQRCodeSuncessBlock(self,obj.stringValue);
+            if([self.scanType isEqual: @(DefaultInputType)]) {
+                if(![RICodeManager.sharedInstance checkOneCodeByCodeType:self.chooseArray[0][self.codeType.integerValue] codeContent:obj.stringValue]) {
+                    [RICodeManager.sharedInstance insertOneCodeByCodeType:self.chooseArray[0][self.codeType.integerValue] codeContent:obj.stringValue];
+                    [alert initWithTitle:@"输入" message:obj.stringValue delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定",nil];
+                }else {
+                    [alert initWithTitle:@"输入" message:@"输入有误" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil];
+                }
+            } else {
+                if ([RICodeManager.sharedInstance checkOneCodeByCodeType:self.chooseArray[0][self.codeType.integerValue] codeContent:obj.stringValue]) {
+                     [alert initWithTitle:@"扫描" message:@"正确的输入卷" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定",nil];
+                } else {
+                    [alert initWithTitle:@"扫描" message:@"非法的输入卷" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
                 }
             }
-            else
-            {
-                if (self.SYQRCodeFailBlock) {
-                    self.SYQRCodeFailBlock(self);
-                }
-            }
-        }
-        else
-        {
+        } else {
             if (self.SYQRCodeFailBlock) {
                 self.SYQRCodeFailBlock(self);
             }
         }
     }
-    else
-    {
-        if (self.SYQRCodeFailBlock) {
-            self.SYQRCodeFailBlock(self);
-        }
-    }
+    [alert show];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     NSLog(@" buttonIndex === %ld", (long)buttonIndex);
-    if([self.scanType  isEqual: @1]) {
-        [RICodeManager.sharedInstance insertOneCodeByCodeType:alertView.title codeContent:alertView.message];
+    if([self.scanType  isEqual: @(DefaultInputType)] && buttonIndex) {
+        [RICodeManager.sharedInstance insertOneCodeByCodeType:self.chooseArray[0][self.codeType.integerValue] codeContent:alertView.message];
     }
     [self startSYQRCodeReading];
 }
