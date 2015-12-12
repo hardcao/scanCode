@@ -9,6 +9,15 @@
 #ifndef RenrenOfficial_iOS_Base_RIPublicHeaders_h
 #define RenrenOfficial_iOS_Base_RIPublicHeaders_h
 
+#define kDeviceWidth [UIScreen mainScreen].bounds.size.width
+#define KDeviceHeight [UIScreen mainScreen].bounds.size.height
+#define KDeviceFrame [UIScreen mainScreen].bounds
+
+static const float kLineMinY = 185;
+static const float kLineMaxY = 385;
+static const float kReaderViewWidth = 200;
+static const float kReaderViewHeight = 200;
+
 #ifdef __OBJC__
 #import "Base64nl/Base64.h"
 #import "MD5Digest/NSString+MD5.h"

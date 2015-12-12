@@ -26,7 +26,7 @@ static NSString * const kRememberPasswordKey = @"rememberPasswordKey";
 
 + (RKMapping*) dataMapping
 {
-    RKObjectMapping *responseMapping = [RKObjectMapping mappingForClass:self.class];
+   RKObjectMapping *responseMapping = [RKObjectMapping mappingForClass:self.class];
     
     [responseMapping addAttributeMappingsFromDictionary:@{
                                                           @"head_url":@"headURL",
@@ -40,7 +40,7 @@ static NSString * const kRememberPasswordKey = @"rememberPasswordKey";
                                                           @"fill_stage":@"isProfileCompletionNeeded",
                                                           @"is_guide":@"isGuided",
                                                           }];
-    return responseMapping;
+   return responseMapping;
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder

@@ -8,16 +8,8 @@
 
 #import "SYQRCodeViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "DropDownListView.h"
 
-//设备宽/高/坐标
-#define kDeviceWidth [UIScreen mainScreen].bounds.size.width
-#define KDeviceHeight [UIScreen mainScreen].bounds.size.height
-#define KDeviceFrame [UIScreen mainScreen].bounds
-
-static const float kLineMinY = 185;
-static const float kLineMaxY = 385;
-static const float kReaderViewWidth = 200;
-static const float kReaderViewHeight = 200;
 
 @interface SYQRCodeViewController () <AVCaptureMetadataOutputObjectsDelegate>
 
@@ -25,6 +17,8 @@ static const float kReaderViewHeight = 200;
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *qrVideoPreviewLayer;//读取
 @property (nonatomic, strong) UIImageView *line;//交互线
 @property (nonatomic, strong) NSTimer *lineTimer;//交互线控制
+@property (nonatomic, strong) NSMutableArray *chooseArray ;
+@property (nonatomic, strong) NSNumber *scanType;
 @property (weak, nonatomic) IBOutlet UIImageView *codeLine;
 
 @end
@@ -44,6 +38,17 @@ CGRect startFame;
     [self startSYQRCodeReading];
     [self initTitleView];
     [self createBackBtn];
+    self.title = @"DropDownMenu";
+    self.chooseArray = [NSMutableArray arrayWithArray:@[
+                                                   @[@"童明城",@"童赟",@"童林杰",@"老萧狗"],
+                                                   @[@"输入",@"输出"]
+                                                   ]];
+    
+    DropDownListView * dropDownView = [[DropDownListView alloc] initWithFrame:CGRectMake(0,60, self.view.frame.size.width, 40) dataSource:self delegate:self];
+    dropDownView.mSuperView = self.view;
+    
+    
+    [self.view addSubview:dropDownView];
 }
 
 - (void)dealloc
@@ -315,6 +320,32 @@ CGRect startFame;
     }
     
     //NSLog(@"_line.frame.origin.y==%f",_line.frame.origin.y);
+}
+
+#pragma mark -- dropDownListDelegate
+-(void) chooseAtSection:(NSInteger)section index:(NSInteger)index
+{
+    NSLog(@"童大爷选了section:%ld ,index:%ld name %@",(long)section,(long)index, self.chooseArray[section][index]);
+    
+}
+
+#pragma mark -- dropdownList DataSource
+-(NSInteger)numberOfSections
+{
+    return [self.chooseArray count];
+}
+-(NSInteger)numberOfRowsInSection:(NSInteger)section
+{
+    NSArray *arry =self.chooseArray[section];
+    return [arry count];
+}
+-(NSString *)titleInSection:(NSInteger)section index:(NSInteger) index
+{
+    return self.chooseArray[section][index];
+}
+-(NSInteger)defaultShowSection:(NSInteger)section
+{
+    return 0;
 }
 
 @end
