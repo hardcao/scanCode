@@ -9,6 +9,7 @@
 #import "SYQRCodeViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "DropDownListView.h"
+#import "RICodeManager.h"
 
 
 @interface SYQRCodeViewController () <AVCaptureMetadataOutputObjectsDelegate>
@@ -208,7 +209,7 @@ CGRect startFame;
             NSLog(@"---------%@",obj.stringValue);
             if(obj.stringValue != nil){
             UIAlertView *alert = [[UIAlertView alloc]init];
-                [alert initWithTitle:self.chooseArray[1][self.scanType.integerValue] message:self.chooseArray[0][self.codeType.integerValue] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+                [alert initWithTitle:self.chooseArray[0][self.scanType.integerValue] message:obj.stringValue delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
                 [alert show];
             }
             if ([obj.stringValue containsString:@"http"])
@@ -237,6 +238,15 @@ CGRect startFame;
             self.SYQRCodeFailBlock(self);
         }
     }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSLog(@" buttonIndex === %ld", (long)buttonIndex);
+    if([self.scanType  isEqual: @1]) {
+        [RICodeManager.sharedInstance insertOneCodeByCodeType:alertView.title codeContent:alertView.message];
+    }
+    [self startSYQRCodeReading];
 }
 
 

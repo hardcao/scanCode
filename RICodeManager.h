@@ -23,8 +23,11 @@
 - (MCode *) getOneCodeByCodeType:(NSString *)codeType
                      codeContent:(NSString *)codeContent;
 
-- (bool) checkOneCodeByCodeType:(NSString *)codeType
+- (BOOL) checkOneCodeByCodeType:(NSString *)codeType
                     codeContent:(NSString *)codeContent;
+
+- (BOOL) insertOneCodeByCodeType:(NSString *)codeType
+                     codeContent:(NSString *)codeContent;
 
 @end
 

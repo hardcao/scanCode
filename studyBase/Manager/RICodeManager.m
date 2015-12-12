@@ -44,4 +44,10 @@
                     codeContent:(NSString *)codeContent {
     return true;
 }
+
+- (BOOL) insertOneCodeByCodeType:(NSString *)codeType
+                     codeContent:(NSString *)codeContent {
+    return true;
+}
+
 @end
