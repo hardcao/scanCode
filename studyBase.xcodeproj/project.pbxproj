@@ -17,6 +17,7 @@
 		133AC88B1C1BCEF8000323B0 /* down_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 133AC8871C1BCEF8000323B0 /* down_dark.png */; };
 		133AC88C1C1BCEF8000323B0 /* DropDownListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 133AC88A1C1BCEF8000323B0 /* DropDownListView.m */; };
 		133AC8981C1BD689000323B0 /* MCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 133AC8961C1BD689000323B0 /* MCode.m */; };
+		133AC89B1C1BDDC2000323B0 /* RICodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 133AC8991C1BDDC2000323B0 /* RICodeManager.m */; };
 		135109EF1C19D8E100B37AE3 /* RIUITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E5DFCA1C18729500E38A10 /* RIUITableView.m */; };
 		137CB3AC1C17131900ED495B /* SYQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 137CB3AB1C17131900ED495B /* SYQRCodeViewController.m */; };
 		137CB3AD1C171AEF00ED495B /* SYQRCodeViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 137CB3AA1C17131900ED495B /* SYQRCodeViewController.h */; };
@@ -111,6 +112,8 @@
 		133AC88A1C1BCEF8000323B0 /* DropDownListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DropDownListView.m; path = ScanCode/dropDownList/DropDownListView.m; sourceTree = "<group>"; };
 		133AC8951C1BD689000323B0 /* MCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCode.h; path = Model/MCode.h; sourceTree = "<group>"; };
 		133AC8961C1BD689000323B0 /* MCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCode.m; path = Model/MCode.m; sourceTree = "<group>"; };
+		133AC8991C1BDDC2000323B0 /* RICodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RICodeManager.m; path = studyBase/Manager/RICodeManager.m; sourceTree = "<group>"; };
+		133AC89D1C1BDE97000323B0 /* RICodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RICodeManager.h; sourceTree = "<group>"; };
 		137CB3AA1C17131900ED495B /* SYQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYQRCodeViewController.h; sourceTree = "<group>"; };
 		137CB3AB1C17131900ED495B /* SYQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYQRCodeViewController.m; sourceTree = "<group>"; };
 		13C8A8371C0A8439007D3BE6 /* ScanCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScanCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -357,6 +360,8 @@
 				7716BCFA188F6A1D00AB539C /* RILoginManager.m */,
 				7716BCFC188F6A7F00AB539C /* RILoggingManager.h */,
 				7716BCFD188F6A7F00AB539C /* RILoggingManager.m */,
+				133AC8991C1BDDC2000323B0 /* RICodeManager.m */,
+				133AC89D1C1BDE97000323B0 /* RICodeManager.h */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -520,6 +525,7 @@
 				TargetAttributes = {
 					133315261C09A63800DAC59E = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = EGLUV565VE;
 					};
 					133315411C09A63800DAC59E = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -707,6 +713,7 @@
 				13E5DFC01C186A6F00E38A10 /* RILoginRequest.m in Sources */,
 				13E5DFBF1C186A6700E38A10 /* MResult.m in Sources */,
 				13E5DFBE1C186A6000E38A10 /* RIRegisteredRequest.m in Sources */,
+				133AC89B1C1BDDC2000323B0 /* RICodeManager.m in Sources */,
 				13E5DFBD1C186A5800E38A10 /* RIDataSourceRegister.m in Sources */,
 				13E5DFBC1C186A4C00E38A10 /* RIDataSource.m in Sources */,
 				13E5DFBB1C186A4400E38A10 /* RIDataRequest.m in Sources */,
@@ -809,6 +816,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -842,7 +850,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = hardac.ScanCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -852,6 +860,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -885,7 +894,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = hardac.ScanCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

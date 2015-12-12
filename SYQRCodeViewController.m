@@ -19,6 +19,7 @@
 @property (nonatomic, strong) NSTimer *lineTimer;//交互线控制
 @property (nonatomic, strong) NSMutableArray *chooseArray ;
 @property (nonatomic, strong) NSNumber *scanType;
+@property (nonatomic, strong) NSNumber *codeType;
 @property (weak, nonatomic) IBOutlet UIImageView *codeLine;
 
 @end
@@ -33,6 +34,8 @@ CGRect startFame;
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     startFame = self.codeLine.frame;
+    self.codeType = @0;
+    self.scanType = @0;
     [self initUI];
     [self setOverlayPickerView];
     [self startSYQRCodeReading];
@@ -203,7 +206,11 @@ CGRect startFame;
         if (obj.stringValue && ![obj.stringValue isEqualToString:@""] && obj.stringValue.length > 0)
         {
             NSLog(@"---------%@",obj.stringValue);
-            
+            if(obj.stringValue != nil){
+            UIAlertView *alert = [[UIAlertView alloc]init];
+                [alert initWithTitle:self.chooseArray[1][self.scanType.integerValue] message:self.chooseArray[0][self.codeType.integerValue] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+                [alert show];
+            }
             if ([obj.stringValue containsString:@"http"])
             {
                 if (self.SYQRCodeSuncessBlock) {
@@ -328,6 +335,8 @@ CGRect startFame;
     NSLog(@"童大爷选了section:%ld ,index:%ld name %@",(long)section,(long)index, self.chooseArray[section][index]);
     if(section == 1) {
         self.scanType = @(index);
+    } else {
+        self.codeType = @(index);
     }
     
 }
