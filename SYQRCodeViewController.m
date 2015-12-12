@@ -326,6 +326,9 @@ CGRect startFame;
 -(void) chooseAtSection:(NSInteger)section index:(NSInteger)index
 {
     NSLog(@"童大爷选了section:%ld ,index:%ld name %@",(long)section,(long)index, self.chooseArray[section][index]);
+    if(section == 1) {
+        self.scanType = @(index);
+    }
     
 }
 
