@@ -41,7 +41,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="codeContent" destination="ble-eO-s2E" id="t2y-fq-cUY"/>
+                                    <outlet property="codeContent" destination="IAX-RG-nHi" id="XaW-sp-Kub"/>
+                                    <outlet property="scanNum" destination="ble-eO-s2E" id="TcQ-lg-7WA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
