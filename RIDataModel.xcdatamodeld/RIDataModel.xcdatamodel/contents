@@ -2,7 +2,7 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="14F27" minimumToolsVersion="Xcode 4.3">
     <entity name="MCode" representedClassName="MCode" syncable="YES">
         <attribute name="codeContent" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="codeType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="codeType" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="scanCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>

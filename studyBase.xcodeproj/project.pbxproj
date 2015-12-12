@@ -16,9 +16,9 @@
 		133AC8851C1BC8FB000323B0 /* SYQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 137CB3AB1C17131900ED495B /* SYQRCodeViewController.m */; };
 		133AC88B1C1BCEF8000323B0 /* down_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 133AC8871C1BCEF8000323B0 /* down_dark.png */; };
 		133AC88C1C1BCEF8000323B0 /* DropDownListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 133AC88A1C1BCEF8000323B0 /* DropDownListView.m */; };
-		133AC8981C1BD689000323B0 /* MCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 133AC8961C1BD689000323B0 /* MCode.m */; };
 		133AC89B1C1BDDC2000323B0 /* RICodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 133AC8991C1BDDC2000323B0 /* RICodeManager.m */; };
 		135109EF1C19D8E100B37AE3 /* RIUITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E5DFCA1C18729500E38A10 /* RIUITableView.m */; };
+		1374F8321C1BEF9D0000539D /* MCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1374F8301C1BEF9D0000539D /* MCode.m */; };
 		137CB3AC1C17131900ED495B /* SYQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 137CB3AB1C17131900ED495B /* SYQRCodeViewController.m */; };
 		137CB3AD1C171AEF00ED495B /* SYQRCodeViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 137CB3AA1C17131900ED495B /* SYQRCodeViewController.h */; };
 		13C8A8491C0A8840007D3BE6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13C8A8481C0A8840007D3BE6 /* Images.xcassets */; };
@@ -110,10 +110,10 @@
 		133AC8881C1BCEF8000323B0 /* DropDownChooseProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DropDownChooseProtocol.h; path = ScanCode/dropDownList/DropDownChooseProtocol.h; sourceTree = "<group>"; };
 		133AC8891C1BCEF8000323B0 /* DropDownListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DropDownListView.h; path = ScanCode/dropDownList/DropDownListView.h; sourceTree = "<group>"; };
 		133AC88A1C1BCEF8000323B0 /* DropDownListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DropDownListView.m; path = ScanCode/dropDownList/DropDownListView.m; sourceTree = "<group>"; };
-		133AC8951C1BD689000323B0 /* MCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCode.h; path = Model/MCode.h; sourceTree = "<group>"; };
-		133AC8961C1BD689000323B0 /* MCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCode.m; path = Model/MCode.m; sourceTree = "<group>"; };
 		133AC8991C1BDDC2000323B0 /* RICodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RICodeManager.m; path = studyBase/Manager/RICodeManager.m; sourceTree = "<group>"; };
 		133AC89D1C1BDE97000323B0 /* RICodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RICodeManager.h; sourceTree = "<group>"; };
+		1374F82F1C1BEF9D0000539D /* MCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCode.h; path = Model/MCode.h; sourceTree = "<group>"; };
+		1374F8301C1BEF9D0000539D /* MCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCode.m; path = Model/MCode.m; sourceTree = "<group>"; };
 		137CB3AA1C17131900ED495B /* SYQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYQRCodeViewController.h; sourceTree = "<group>"; };
 		137CB3AB1C17131900ED495B /* SYQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYQRCodeViewController.m; sourceTree = "<group>"; };
 		13C8A8371C0A8439007D3BE6 /* ScanCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScanCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -347,8 +347,8 @@
 				7716BD17188F6D5E00AB539C /* MError.h */,
 				7716BD18188F6D5E00AB539C /* MError.m */,
 				7716BD20188F7DB900AB539C /* RIDataModel.xcdatamodeld */,
-				133AC8951C1BD689000323B0 /* MCode.h */,
-				133AC8961C1BD689000323B0 /* MCode.m */,
+				1374F82F1C1BEF9D0000539D /* MCode.h */,
+				1374F8301C1BEF9D0000539D /* MCode.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -703,6 +703,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				133AC8851C1BC8FB000323B0 /* SYQRCodeViewController.m in Sources */,
+				1374F8321C1BEF9D0000539D /* MCode.m in Sources */,
 				13E5DFD11C1875FA00E38A10 /* RIUITableViewCell.m in Sources */,
 				13E5DFCD1C18737500E38A10 /* RIUITableView.m in Sources */,
 				133AC88C1C1BCEF8000323B0 /* DropDownListView.m in Sources */,
@@ -720,7 +721,6 @@
 				13E5DFBA1C186A3D00E38A10 /* RILoggingManager.m in Sources */,
 				13E5DFB91C186A3600E38A10 /* RILoginManager.m in Sources */,
 				13E5DFB81C186A3000E38A10 /* RIUtility.m in Sources */,
-				133AC8981C1BD689000323B0 /* MCode.m in Sources */,
 				13E5DFB71C186A2B00E38A10 /* RRKeyChain.m in Sources */,
 				13E5DFB61C186A2600E38A10 /* UIDevice+AdditionalInfo.m in Sources */,
 				133315311C09A63800DAC59E /* ViewController.m in Sources */,

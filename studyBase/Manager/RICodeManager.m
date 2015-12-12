@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "RICodeManager.h"
+#import "RIDataSource.h"
 
 
 @implementation RICodeManager
@@ -29,24 +30,77 @@
     return self;
 }
 
-- (NSMutableArray *) getAllCodeByCodeType:(NSString*)codeType {
-    NSMutableArray *allCode = [[NSMutableArray alloc] init];
-    return allCode;
+- (NSArray *) getAllCodeByCodeType:(NSString*)codeType {
+    NSString *predicateFormatString = [NSString stringWithFormat:@"(codeType = %@)", codeType];
+    NSPredicate *inPredicate = [NSPredicate predicateWithFormat:predicateFormatString];
+    NSFetchRequest *localFetch = [NSFetchRequest fetchRequestWithEntityName:@"MCode"];
+    localFetch.predicate = inPredicate;
+    NSSortDescriptor *idDescriptor = [[NSSortDescriptor alloc] initWithKey:@"codeContent" ascending:NO];
+    [localFetch setSortDescriptors:@[idDescriptor]];
+    
+    __block NSArray *savedCodes = nil;
+    __block NSInteger totalCount;
+    NSManagedObjectContext *context = [RIDataSource sharedInstance].mainQueueManagedObjectContext;
+    [context performBlockAndWait:^{
+        savedCodes = [context executeFetchRequest:localFetch error:nil];
+        totalCount = [context countForEntityForName:@"MCode" predicate:nil error:nil];
+    }];
+    return savedCodes;
 }
 
 - (MCode *) getOneCodeByCodeType:(NSString *)codeType
                      codeContent:(NSString *)codeContent {
-    MCode *reseachCode = [[MCode alloc] init];
-    return reseachCode;
+    NSString *predicateFormatString = [NSString stringWithFormat:@"(codeType = %@) AND (codeContent == %@)", codeType, codeContent];
+    NSPredicate *inPredicate = [NSPredicate predicateWithFormat:predicateFormatString];
+    NSFetchRequest *localFetch = [NSFetchRequest fetchRequestWithEntityName:@"MCode"];
+    localFetch.predicate = inPredicate;
+    NSSortDescriptor *idDescriptor = [[NSSortDescriptor alloc] initWithKey:@"codeContent" ascending:NO];
+    [localFetch setSortDescriptors:@[idDescriptor]];
+    
+    __block NSArray *savedCodes = nil;
+    __block NSInteger totalCount;
+    NSManagedObjectContext *context = [RIDataSource sharedInstance].mainQueueManagedObjectContext;
+    [context performBlockAndWait:^{
+        savedCodes = [context executeFetchRequest:localFetch error:nil];
+        totalCount = [context countForEntityForName:@"MCode" predicate:nil error:nil];
+    }];
+    if(savedCodes.count > 0) return savedCodes[0];
+    return nil;
 }
 
 - (bool) checkOneCodeByCodeType:(NSString *)codeType
                     codeContent:(NSString *)codeContent {
-    return true;
+    if([self getOneCodeByCodeType:codeType codeContent:codeContent] != nil) return true;
+    return false;
 }
 
 - (BOOL) insertOneCodeByCodeType:(NSString *)codeType
                      codeContent:(NSString *)codeContent {
+    MCode * tmpCode;
+    NSString *predicateFormatString = [NSString stringWithFormat:@"(codeType = %@) AND (codeContent == %@)", codeType, codeContent];
+    NSPredicate *inPredicate = [NSPredicate predicateWithFormat:predicateFormatString];
+    NSFetchRequest *localFetch = [NSFetchRequest fetchRequestWithEntityName:@"MCode"];
+    localFetch.predicate = inPredicate;
+    NSSortDescriptor *idDescriptor = [[NSSortDescriptor alloc] initWithKey:@"codeContent" ascending:NO];
+    [localFetch setSortDescriptors:@[idDescriptor]];
+    
+    __block NSArray *savedCodes = nil;
+    __block NSInteger totalCount;
+    NSManagedObjectContext *context = [RIDataSource sharedInstance].mainQueueManagedObjectContext;
+    [context performBlockAndWait:^{
+        savedCodes = [context executeFetchRequest:localFetch error:nil];
+        totalCount = [context countForEntityForName:@"MCode" predicate:nil error:nil];
+    }];
+    if(savedCodes.count > 0) {
+        tmpCode = savedCodes[0];
+        tmpCode.scanCount = @(tmpCode.scanCount.integerValue + 1);
+    } else {
+        MCode *tmpcode = [[MCode alloc] init];
+        tmpcode.codeType = codeType;
+        tmpcode.codeContent = codeContent;
+        tmpcode.scanCount = @0;
+    }
+    [context saveToPersistentStore:nil];
     return true;
 }
 

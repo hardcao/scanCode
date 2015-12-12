@@ -18,7 +18,7 @@
 + (RICodeManager*) sharedInstance;
 
 
-- (NSMutableArray *) getAllCodeByCodeType:(NSString*)codeType;
+- (NSArray *) getAllCodeByCodeType:(NSString*)codeType;
 
 - (MCode *) getOneCodeByCodeType:(NSString *)codeType
                      codeContent:(NSString *)codeContent;

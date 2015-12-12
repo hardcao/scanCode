@@ -8,11 +8,10 @@
 
 #import "MCode.h"
 
-
 @implementation MCode
 
 @dynamic codeContent;
-@dynamic scanCount;
 @dynamic codeType;
+@dynamic scanCount;
 
 @end
