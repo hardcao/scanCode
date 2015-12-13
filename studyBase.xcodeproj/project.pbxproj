@@ -43,6 +43,8 @@
 		13E5DFCD1C18737500E38A10 /* RIUITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E5DFCA1C18729500E38A10 /* RIUITableView.m */; };
 		13E5DFD01C1875B400E38A10 /* RIUITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E5DFCF1C1875B400E38A10 /* RIUITableViewCell.m */; };
 		13E5DFD11C1875FA00E38A10 /* RIUITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E5DFCF1C1875B400E38A10 /* RIUITableViewCell.m */; };
+		13EDB8D41C1D094500567A27 /* RIUITableList.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EDB8D31C1D094500567A27 /* RIUITableList.m */; };
+		13EDB8D51C1D094500567A27 /* RIUITableList.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EDB8D31C1D094500567A27 /* RIUITableList.m */; };
 		7716BCF8188F697500AB539C /* RIUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 7716BCF7188F697500AB539C /* RIUtility.m */; };
 		7716BCFB188F6A1D00AB539C /* RILoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7716BCFA188F6A1D00AB539C /* RILoginManager.m */; };
 		7716BCFE188F6A7F00AB539C /* RILoggingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7716BCFD188F6A7F00AB539C /* RILoggingManager.m */; };
@@ -127,6 +129,8 @@
 		13E5DFCC1C18735400E38A10 /* RIUITableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIUITableView.h; sourceTree = "<group>"; };
 		13E5DFCE1C18756500E38A10 /* RIUITableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIUITableViewCell.h; sourceTree = "<group>"; };
 		13E5DFCF1C1875B400E38A10 /* RIUITableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RIUITableViewCell.m; path = ScanCode/RIUITableViewCell.m; sourceTree = "<group>"; };
+		13EDB8D21C1D094500567A27 /* RIUITableList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RIUITableList.h; path = ScanCode/RIUITableList.h; sourceTree = "<group>"; };
+		13EDB8D31C1D094500567A27 /* RIUITableList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RIUITableList.m; path = ScanCode/RIUITableList.m; sourceTree = "<group>"; };
 		77084DBF188E1BA1006C791A /* UIDevice+AdditionalInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIDevice+AdditionalInfo.h"; path = "Utilities/UIDevice+AdditionalInfo.h"; sourceTree = "<group>"; };
 		77084DC0188E1BA1006C791A /* UIDevice+AdditionalInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+AdditionalInfo.m"; path = "Utilities/UIDevice+AdditionalInfo.m"; sourceTree = "<group>"; };
 		77084DC2188E1C87006C791A /* RRKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RRKeyChain.h; path = Utilities/RRKeyChain.h; sourceTree = "<group>"; };
@@ -285,6 +289,8 @@
 				13E5DFCC1C18735400E38A10 /* RIUITableView.h */,
 				13E5DFCE1C18756500E38A10 /* RIUITableViewCell.h */,
 				13E5DFCF1C1875B400E38A10 /* RIUITableViewCell.m */,
+				13EDB8D21C1D094500567A27 /* RIUITableList.h */,
+				13EDB8D31C1D094500567A27 /* RIUITableList.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -710,6 +716,7 @@
 				13E5DFC41C186A9200E38A10 /* RISettings.m in Sources */,
 				13E5DFC31C186A8600E38A10 /* RIDataModel.xcdatamodeld in Sources */,
 				13E5DFC21C186A8000E38A10 /* MError.m in Sources */,
+				13EDB8D51C1D094500567A27 /* RIUITableList.m in Sources */,
 				13E5DFC11C186A7700E38A10 /* MUserLoginInfo.m in Sources */,
 				13E5DFC01C186A6F00E38A10 /* RILoginRequest.m in Sources */,
 				13E5DFBF1C186A6700E38A10 /* MResult.m in Sources */,
@@ -752,6 +759,7 @@
 				137CB3AD1C171AEF00ED495B /* SYQRCodeViewController.h in Sources */,
 				77B887CA188E942900C21C3A /* RISettings.m in Sources */,
 				7716BD19188F6D5E00AB539C /* MError.m in Sources */,
+				13EDB8D41C1D094500567A27 /* RIUITableList.m in Sources */,
 				7716BD0D188F6C5600AB539C /* RIRegisteredRequest.m in Sources */,
 				7716BD10188F6CA600AB539C /* RILoginRequest.m in Sources */,
 				7716BD13188F6CE800AB539C /* MResult.m in Sources */,

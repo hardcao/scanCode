@@ -10,6 +10,7 @@
 #import "RICodeManager.h"
 #import "RIUITableViewCell.h"
 #import "MCode.h"
+#import "DropDownListView.h"
 #define IDENTIFIER @"RIUITableViewCell"
 
 @implementation RIUITableView
@@ -18,6 +19,22 @@
 {
     [super viewDidLoad];
     self.dataList = [[RICodeManager sharedInstance] getAllCodeByCodeType:@"first"];
+    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0,0,kDeviceWidth, 64)];
+    bgView.backgroundColor = [UIColor colorWithRed:62.0/255 green:199.0/255 blue:153.0/255 alpha:1.0];
+    [self.view addSubview:bgView];
+    
+    UILabel *titleLab = [[UILabel alloc] initWithFrame:CGRectMake((kDeviceWidth - 40) / 2.0, 28, 40, 20)];
+    //scanCropView.image=[UIImage imageNamed:@""];
+    //titleLab.layer.borderColor = [UIColor greenColor].CGColor;
+    //titleLab.layer.borderWidth = 2.0;
+    //titleLab.backgroundColor = [UIColor colorWithRed:62.0/255 green:199.0/255 blue:153.0/255 alpha:1.0];
+    self.chooseArray = [NSMutableArray arrayWithArray:@[
+                                                        @[@"first",@"scond",@"third"]
+                                                        ]];
+    
+    DropDownListView * dropDownView = [[DropDownListView alloc] initWithFrame:CGRectMake(0,60, self.view.frame.size.width, 40) dataSource:self delegate:self];
+    dropDownView.mSuperView = self.view;
+    [self.view addSubview:dropDownView];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -32,27 +49,31 @@
     return cell.frame.size.height;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return  40;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if(self.dataList) {
-        return self.dataList.count;
-    }
-    return 0;
+//    if(self.dataList) {
+//        return self.dataList.count;
+//    }
+    return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MCode *tmp = self.dataList[indexPath.row];
+   // MCode *tmp = self.dataList[indexPath.row];
     RIUITableViewCell *cell = (RIUITableViewCell *)[tableView dequeueReusableCellWithIdentifier:IDENTIFIER];
     
     if (!cell) {
         cell = [[RIUITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:IDENTIFIER];
     }
     
-    [cell setTableCellWithCodeContent:tmp.codeContent scanNum:tmp.scanCount.stringValue];
-    
+//    [cell setTableCellWithCodeContent:tmp.codeContent scanNum:tmp.scanCount.stringValue];
+    [cell setTableCellWithCodeContent:@"test" scanNum:@"4"];
     return cell;
 }
 
@@ -132,6 +153,25 @@
         NSArray *indexPaths = @[indexPath];
 //        [_tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationLeft];
     }
+}
+
+#pragma mark -- dropdownList DataSource
+-(NSInteger)numberOfSections
+{
+    return [self.chooseArray count];
+}
+-(NSInteger)numberOfRowsInSection:(NSInteger)section
+{
+    NSArray *arry =self.chooseArray[section];
+    return [arry count];
+}
+-(NSString *)titleInSection:(NSInteger)section index:(NSInteger) index
+{
+    return self.chooseArray[section][index];
+}
+-(NSInteger)defaultShowSection:(NSInteger)section
+{
+    return 0;
 }
 
 @end

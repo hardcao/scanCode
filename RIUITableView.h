@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RIUITableView : UITableViewController<UITableViewDataSource, UITableViewDelegate>
+@interface RIUITableView : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 
 @property (nonatomic, strong) NSArray *dataList;
+@property (nonatomic, strong) NSMutableArray *chooseArray ;
 
 @end
