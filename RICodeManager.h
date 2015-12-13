@@ -29,6 +29,9 @@
 - (BOOL) insertOneCodeByCodeType:(NSString *)codeType
                      codeContent:(NSString *)codeContent;
 
+- (void) deleteOneCodeByCodeType:(NSString *)codeType
+                     codeContent:(NSString *)codeContent;
+
 @end
 
 #endif /* RICodeManager_h */

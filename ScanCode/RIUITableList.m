@@ -23,9 +23,10 @@
                                                         @[@"first",@"scond",@"third"]
                                                         ]];
     
-    DropDownListView * dropDownView = [[DropDownListView alloc] initWithFrame:CGRectMake(0,30, self.view.frame.size.width, 40) dataSource:self delegate:self];
+    DropDownListView * dropDownView = [[DropDownListView alloc] initWithFrame:CGRectMake(0,20, self.view.frame.size.width, 40) dataSource:self delegate:self];
     dropDownView.mSuperView = self.view;
     [self.view addSubview:dropDownView];
+    [self.tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
 }
 
 - (void)viewDidUnload
@@ -61,11 +62,34 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"select table cell row === %ld" , (long)indexPath.row);
+}
 
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MCode *tmpCode = self.dataList[indexPath.row];
+    NSLog(@"will select----%ld",(long)indexPath.row);
+     UIAlertView *alert =  [[UIAlertView  alloc]initWithTitle:@"删除二维码" message:tmpCode.codeContent delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定",nil];
+    [alert show];
+    return indexPath;
+}
+
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSLog(@" buttonIndex === %ld", (long)buttonIndex);
+    if(buttonIndex) {
+        [RICodeManager.sharedInstance deleteOneCodeByCodeType:self.chooseArray[0][self.codeType.integerValue] codeContent:alertView.message];
+        self.dataList = [[RICodeManager sharedInstance] getAllCodeByCodeType:self.chooseArray[0][self.codeType.integerValue]];
+        [self.tableView reloadData];
+    }
+}
 #pragma mark -- dropDownListDelegate
 -(void) chooseAtSection:(NSInteger)section index:(NSInteger)index
 {
     NSLog(@"童大爷选了section:%ld ,index:%ld name %@",(long)section,(long)index, self.chooseArray[section][index]);
+    self.codeType = @(index);
     self.dataList = [[RICodeManager sharedInstance] getAllCodeByCodeType:self.chooseArray[section][index]];
     [self.tableView reloadData];
 }

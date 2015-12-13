@@ -107,4 +107,26 @@
     return true;
 }
 
+- (void) deleteOneCodeByCodeType:(NSString *)codeType
+                     codeContent:(NSString *)codeContent{
+    NSString *predicateFormatString = [NSString stringWithFormat:@"(codeType == '%@') AND (codeContent == '%@')", codeType, codeContent];
+    NSPredicate *inPredicate = [NSPredicate predicateWithFormat:predicateFormatString];
+    NSFetchRequest *localFetch = [NSFetchRequest fetchRequestWithEntityName:@"MCode"];
+    localFetch.predicate = inPredicate;
+    NSSortDescriptor *idDescriptor = [[NSSortDescriptor alloc] initWithKey:@"codeContent" ascending:YES];
+    [localFetch setSortDescriptors:@[idDescriptor]];
+    
+    __block NSArray *savedCodes = nil;
+    __block NSInteger totalCount;
+    NSManagedObjectContext *context = [RIDataSource sharedInstance].mainQueueManagedObjectContext;
+    [context performBlockAndWait:^{
+        savedCodes = [context executeFetchRequest:localFetch error:nil];
+        totalCount = [context countForEntityForName:@"MCode" predicate:nil error:nil];
+    }];
+    for(int i = 0; i < savedCodes.count; i ++) {
+        [context deleteObject:savedCodes[i]];
+    }
+    [context saveToPersistentStore:nil];
+}
+
 @end

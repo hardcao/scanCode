@@ -12,7 +12,7 @@
 @interface RIUITableList : UIViewController<UITableViewDelegate, UITableViewDataSource> 
 @property (weak, nonatomic) IBOutlet UIView *chooseView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property (nonatomic, strong) NSNumber *codeType;
 @property (nonatomic, strong) NSArray *dataList;
 @property (nonatomic, strong) NSMutableArray *chooseArray ;
 

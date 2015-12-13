@@ -83,7 +83,7 @@
         <!--TableView-->
         <scene sceneID="e1o-2I-gXR">
             <objects>
-                <viewController title="TableView" id="Kci-nC-IJ1" customClass="RIUITableList" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RIUITableList" title="TableView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Kci-nC-IJ1" customClass="RIUITableList" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NQ0-X8-wEO"/>
                         <viewControllerLayoutGuide type="bottom" id="iwg-9L-beo"/>
@@ -96,12 +96,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="uWq-Ng-pYg">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uWq-Ng-pYg">
                                 <rect key="frame" x="0.0" y="66" width="414" height="557"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" id="huD-5e-oNb" customClass="RIUITableViewCell">
-                                        <rect key="frame" x="0.0" y="49.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="huD-5e-oNb" id="qxt-2u-Txs">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -135,7 +135,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="yFX-kh-Ubj"/>
+                    <tabBarItem key="tabBarItem" title="CodeList" id="yFX-kh-Ubj" userLabel="tableView"/>
                     <connections>
                         <outlet property="chooseView" destination="JY0-yu-BCd" id="kvj-G7-Jd0"/>
                         <outlet property="tableView" destination="uWq-Ng-pYg" id="yJi-2v-ajh"/>
