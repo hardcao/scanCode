@@ -218,9 +218,9 @@ CGRect startFame;
                 }
             } else {
                 if ([RICodeManager.sharedInstance checkOneCodeByCodeType:self.chooseArray[0][self.codeType.integerValue] codeContent:obj.stringValue]) {
-                     [alert initWithTitle:@"扫描" message:@"正确的输入卷" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定",nil];
+                     [alert initWithTitle:@"扫描成功" message:obj.stringValue delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定",nil];
                 } else {
-                    [alert initWithTitle:@"扫描" message:@"非法的输入卷" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+                    [alert initWithTitle:@"扫描失败" message:@"非法的输入卷" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
                 }
             }
         } else {
@@ -235,7 +235,7 @@ CGRect startFame;
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     NSLog(@" buttonIndex === %ld", (long)buttonIndex);
-    if([self.scanType  isEqual: @(DefaultInputType)] && buttonIndex) {
+    if(buttonIndex) {
         [RICodeManager.sharedInstance insertOneCodeByCodeType:self.chooseArray[0][self.codeType.integerValue] codeContent:alertView.message];
     }
     [self startSYQRCodeReading];
